@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -17,12 +18,14 @@ module.exports = {
          use: [{
             loader: 'babel-loader',
             options: {
-               presets: [
-                  'react', 'es2015', 'stage-0'
-               ]
+               presets: ['react', 'es2015', 'stage-0']
             }
          }]
-      }]
+      },
+         {
+            test: /\.scss/,
+            loader: 'import-glob'
+         }]
    },
    resolve: {
       extensions: ['.js', '.jsx', '.css']
@@ -32,7 +35,8 @@ module.exports = {
          template: path.join(__dirname, 'src', 'index.html'),
          filename: path.join(__dirname, 'public', 'index.html')
       }),
-      new CleanWebpackPlugin(['public'])
+      new CleanWebpackPlugin(['public']),
+      new webpack.optimize.ModuleConcatenationPlugin()
       /* new webpack.optimize.UglifyJsPlugin({
        comments: false,
        disable: true
