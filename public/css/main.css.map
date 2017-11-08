@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/css/global.scss"],"names":[],"mappings":"AAAA;EACE,iBAAiB,EAAE;;AAErB;EACE,gBAAgB,EAAE","file":"css/main.css","sourcesContent":["body {\n  background: grey; }\n\n.title {\n  font-size: 15px; }\n\n\n\n// WEBPACK FOOTER //\n// ./src/css/global.scss"],"sourceRoot":""}
