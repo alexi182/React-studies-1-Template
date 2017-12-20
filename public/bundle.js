@@ -1372,7 +1372,7 @@ var _reactDom = __webpack_require__(20);
 
 __webpack_require__(34);
 
-var _App = __webpack_require__(45);
+var _App = __webpack_require__(46);
 
 var _App2 = _interopRequireDefault(_App);
 
@@ -21594,7 +21594,7 @@ __webpack_require__(42);
 
 __webpack_require__(44);
 
-__webpack_require__(48);
+__webpack_require__(45);
 
 /***/ }),
 /* 35 */
@@ -21881,6 +21881,12 @@ module.exports = "/*!\n * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)\n 
 
 /***/ }),
 /* 45 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21896,7 +21902,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Block = __webpack_require__(46);
+var _Block = __webpack_require__(47);
 
 var _Block2 = _interopRequireDefault(_Block);
 
@@ -21956,7 +21962,7 @@ var Main = function (_React$Component) {
 exports.default = Main;
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21997,6 +22003,15 @@ var Block = function (_React$Component) {
             null,
             _react2.default.createElement(
                "div",
+               { classNameName: "bd-example" },
+               _react2.default.createElement(
+                  "button",
+                  { type: "button", classNameName: "btn btn-primary", "data-toggle": "modal", "data-target": "#exampleModalPopovers" },
+                  "Launch demo modal"
+               )
+            ),
+            _react2.default.createElement(
+               "div",
                { id: "carouselExampleControls", className: "carousel slide", "data-ride": "carousel" },
                _react2.default.createElement(
                   "div",
@@ -22004,7 +22019,7 @@ var Block = function (_React$Component) {
                   _react2.default.createElement(
                      "div",
                      { className: "carousel-item active" },
-                     _react2.default.createElement("img", { className: "d-block w-100", src: "...", alt: "First slide" })
+                     _react2.default.createElement("img", { className: "d-block w-100", src: '../img/1.jpg', alt: "First slide" })
                   ),
                   _react2.default.createElement(
                      "div",
@@ -22046,13 +22061,6 @@ var Block = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Block;
-
-/***/ }),
-/* 47 */,
-/* 48 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

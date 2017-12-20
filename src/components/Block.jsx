@@ -4,7 +4,8 @@ export default class Block extends React.Component {
    render() {
       return (
           <div>
-             {/* <div classNameName="modal-body">
+
+             {/*  <div classNameName="modal-body">
               <h5>Popover in a modal</h5>
               <p>
               This <a href="#" role="button" classNameName="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.
@@ -15,16 +16,18 @@ export default class Block extends React.Component {
               <a href="#" classNameName="tooltip-test" title="Tooltip">This link</a> and
               <a href="#" classNameName="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.
               </p>
-              </div>
-              <div classNameName="bd-example">
-              <button type="button" classNameName="btn btn-primary" data-toggle="modal" data-target="#exampleModalPopovers">
-              Launch demo modal
-              </button>
               </div>*/}
+
+             <div classNameName="bd-example">
+                <button type="button" classNameName="btn btn-primary" data-toggle="modal" data-target="#exampleModalPopovers">
+                   Launch demo modal
+                </button>
+             </div>
+
              <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                 <div className="carousel-inner">
                    <div className="carousel-item active">
-                      <img className="d-block w-100" src="..." alt="First slide" />
+                      <img className="d-block w-100" src={'../img/1.jpg'} alt="First slide" />
                    </div>
                    <div className="carousel-item">
                       <img className="d-block w-100" src="..." alt="Second slide" />
@@ -43,6 +46,6 @@ export default class Block extends React.Component {
                 </a>
              </div>
           </div>
-   )
+      )
    }
-   }
+}

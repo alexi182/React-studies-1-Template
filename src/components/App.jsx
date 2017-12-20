@@ -13,7 +13,9 @@ export default class Main extends React.Component {
                    <h2>Info</h2>
                 </div>
              </div>
+
              <Block />
+
           </div>
       )
    }
