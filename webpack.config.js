@@ -14,12 +14,6 @@ module.exports = {
       filename: 'bundle.js'
    },
    module: {
-      /*preloaders: [
-       {
-       test: /\.scss/,
-       loader: 'import-glob'
-       }
-       ],*/
       rules:[
          {
             test: /\.jsx/,
