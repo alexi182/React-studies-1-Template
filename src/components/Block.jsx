@@ -1,23 +1,13 @@
-import React from 'react';
+export const Block = (props) => {
+   const {name} = props;
+   const {age, sex} = props.data;
 
-export const Block = (props) =>
+   return (
+       <div>
+          <p>{name}</p>
+          <p>{age}</p>
+          <p>{sex}</p>
+       </div>
+   )
+};
 
-
-    <div>
-       {console.log(props.data2.age)};
-       <p>{props.data}</p>
-       <p>{props.data2.age}</p>
-       <p>{props.data2.sex}</p>
-
-       {/*<div>{props.data2.map(function(item, index) {
-              return (
-                  <div key={index}>
-                     <span>{item.age}</span>
-                     <span>{item.sex}</span>
-                  </div>
-              )
-           }
-       )}
-       </div>*/}
-
-    </div>;

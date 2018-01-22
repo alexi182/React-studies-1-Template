@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import {Block} from '../components/Block';
 
 const allData = {
@@ -16,9 +15,15 @@ export default class App extends React.Component {
    render() {
       return (
           <div className="container">
-             <Block data={this.name} data2={allData} />
+             <Block name={this.name} data={allData} />
           </div>
       )
    }
 }
+
+Block.propTypes = {
+   data: PropTypes.object.isRequired,
+   name: PropTypes.string.isRequired
+};
+
 

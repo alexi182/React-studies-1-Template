@@ -58,6 +58,12 @@ module.exports = {
       }),
       new ExtractTextPlugin('css/main.css'),
       new CleanWebpackPlugin(['public']),
+      new webpack.ProvidePlugin({
+         React: 'react',
+         axios: 'axios',
+         ReactDOM: 'react-dom',
+         PropTypes: 'prop-types'
+      }),
       new webpack.optimize.ModuleConcatenationPlugin(),
       new CssSourcemapPlugin()
       /* new webpack.optimize.UglifyJsPlugin({
