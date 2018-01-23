@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 17);
+/******/ 	return __webpack_require__(__webpack_require__.s = 16);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -303,9 +303,9 @@ module.exports = emptyFunction;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(18);
+  module.exports = __webpack_require__(17);
 } else {
-  module.exports = __webpack_require__(19);
+  module.exports = __webpack_require__(18);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -422,6 +422,30 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 
+var emptyObject = {};
+
+if (process.env.NODE_ENV !== 'production') {
+  Object.freeze(emptyObject);
+}
+
+module.exports = emptyObject;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+
+
+
 /**
  * Use invariant() to assert state which your program assumes to be true.
  *
@@ -465,30 +489,6 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 module.exports = invariant;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
-
-
-var emptyObject = {};
-
-if (process.env.NODE_ENV !== 'production') {
-  Object.freeze(emptyObject);
-}
-
-module.exports = emptyObject;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
@@ -575,9 +575,9 @@ module.exports = warning;
 
 
 if (process.env.NODE_ENV !== 'production') {
-  var invariant = __webpack_require__(4);
+  var invariant = __webpack_require__(5);
   var warning = __webpack_require__(6);
-  var ReactPropTypesSecret = __webpack_require__(8);
+  var ReactPropTypesSecret = __webpack_require__(19);
   var loggedTypeFailures = {};
 }
 
@@ -637,25 +637,6 @@ module.exports = checkPropTypes;
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-
-module.exports = ReactPropTypesSecret;
-
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -686,7 +667,7 @@ var ExecutionEnvironment = {
 module.exports = ExecutionEnvironment;
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -767,7 +748,7 @@ module.exports = EventListener;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -809,7 +790,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -880,7 +861,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -923,7 +904,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -953,7 +934,7 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -1325,7 +1306,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports) {
 
 /*
@@ -1358,7 +1339,7 @@ module.exports = function(src) {
 
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1381,7 +1362,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _reactDom.render)(_react2.default.createElement(_App2.default, null), document.getElementById('app'));
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1394,7 +1375,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * LICENSE file in the root directory of this source tree.
  */
 
-var m=__webpack_require__(3),n=__webpack_require__(5),p=__webpack_require__(1),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
+var m=__webpack_require__(3),n=__webpack_require__(4),p=__webpack_require__(1),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
 function y(a){for(var b=arguments.length-1,e="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,c=0;c<b;c++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[c+1]);b=Error(e+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var z={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function A(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}A.prototype.isReactComponent={};A.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?y("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};A.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function B(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}function C(){}C.prototype=A.prototype;var D=B.prototype=new C;D.constructor=B;m(D,A.prototype);D.isPureReactComponent=!0;function E(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}var F=E.prototype=new C;F.constructor=E;m(F,A.prototype);F.unstable_isAsyncReactComponent=!0;F.render=function(){return this.props.children};var G={current:null},H=Object.prototype.hasOwnProperty,I={key:!0,ref:!0,__self:!0,__source:!0};
@@ -1409,7 +1390,7 @@ isValidElement:K,version:"16.2.0",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_F
 
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1431,8 +1412,8 @@ if (process.env.NODE_ENV !== "production") {
 'use strict';
 
 var _assign = __webpack_require__(3);
-var emptyObject = __webpack_require__(5);
-var invariant = __webpack_require__(4);
+var emptyObject = __webpack_require__(4);
+var invariant = __webpack_require__(5);
 var warning = __webpack_require__(6);
 var emptyFunction = __webpack_require__(1);
 var checkPropTypes = __webpack_require__(7);
@@ -2774,6 +2755,25 @@ module.exports = react;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+
+module.exports = ReactPropTypesSecret;
+
+
+/***/ }),
 /* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2836,7 +2836,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(2),l=__webpack_require__(9),B=__webpack_require__(3),C=__webpack_require__(1),ba=__webpack_require__(10),da=__webpack_require__(11),ea=__webpack_require__(12),fa=__webpack_require__(13),ia=__webpack_require__(14),D=__webpack_require__(5);
+var aa=__webpack_require__(2),l=__webpack_require__(8),B=__webpack_require__(3),C=__webpack_require__(1),ba=__webpack_require__(9),da=__webpack_require__(10),ea=__webpack_require__(11),fa=__webpack_require__(12),ia=__webpack_require__(13),D=__webpack_require__(4);
 function E(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:E("227");
 var oa={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function pa(a,b){return(a&b)===b}
 var ta={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ta,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){ua.hasOwnProperty(f)?E("48",f):void 0;var g=f.toLowerCase(),h=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:pa(h,b.MUST_USE_PROPERTY),
@@ -3134,17 +3134,17 @@ if (process.env.NODE_ENV !== "production") {
 'use strict';
 
 var React = __webpack_require__(2);
-var invariant = __webpack_require__(4);
+var invariant = __webpack_require__(5);
 var warning = __webpack_require__(6);
-var ExecutionEnvironment = __webpack_require__(9);
+var ExecutionEnvironment = __webpack_require__(8);
 var _assign = __webpack_require__(3);
 var emptyFunction = __webpack_require__(1);
-var EventListener = __webpack_require__(10);
-var getActiveElement = __webpack_require__(11);
-var shallowEqual = __webpack_require__(12);
-var containsNode = __webpack_require__(13);
-var focusNode = __webpack_require__(14);
-var emptyObject = __webpack_require__(5);
+var EventListener = __webpack_require__(9);
+var getActiveElement = __webpack_require__(10);
+var shallowEqual = __webpack_require__(11);
+var containsNode = __webpack_require__(12);
+var focusNode = __webpack_require__(13);
+var emptyObject = __webpack_require__(4);
 var checkPropTypes = __webpack_require__(7);
 var hyphenateStyleName = __webpack_require__(25);
 var camelizeStyleName = __webpack_require__(27);
@@ -18701,7 +18701,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(15)(content, options);
+var update = __webpack_require__(14)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -18732,7 +18732,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(15)(content, options);
+var update = __webpack_require__(14)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -18943,7 +18943,7 @@ module.exports = function (css) {
 /* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(16)(__webpack_require__(36))
+__webpack_require__(15)(__webpack_require__(36))
 
 /***/ }),
 /* 36 */
@@ -18955,7 +18955,7 @@ module.exports = "/*!\n * jQuery JavaScript Library v3.3.1\n * https://jquery.co
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(16)(__webpack_require__(38))
+__webpack_require__(15)(__webpack_require__(38))
 
 /***/ }),
 /* 38 */
@@ -18980,15 +18980,20 @@ module.exports = "/*!\n  * Bootstrap v4.0.0-beta.3 (https://getbootstrap.com)\n 
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(React, PropTypes) {
+/* WEBPACK VAR INJECTION */(function(React) {
 
 Object.defineProperty(exports, "__esModule", {
    value: true
 });
+exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Block = __webpack_require__(45);
+var _Block = __webpack_require__(42);
+
+var _Block2 = _interopRequireDefault(_Block);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -19010,6 +19015,7 @@ var App = function (_React$Component) {
       var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
       _this.name = "Alex";
+      _this.surname = "Kotlov";
       return _this;
    }
 
@@ -19019,7 +19025,7 @@ var App = function (_React$Component) {
          return React.createElement(
             'div',
             { className: 'container' },
-            React.createElement(_Block.Block, { name: this.name, data: allData })
+            React.createElement(_Block2.default, { name: this.name, surname: this.surname, data: allData })
          );
       }
    }]);
@@ -19027,667 +19033,19 @@ var App = function (_React$Component) {
    return App;
 }(React.Component);
 
-exports.default = App;
-
-
-_Block.Block.propTypes = {
+/*
+Block.propTypes = {
    data: PropTypes.object.isRequired,
    name: PropTypes.string.isRequired
 };
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(42)))
+*/
+
+
+exports.default = App;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
 /* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-if (process.env.NODE_ENV !== 'production') {
-  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
-    Symbol.for &&
-    Symbol.for('react.element')) ||
-    0xeac7;
-
-  var isValidElement = function(object) {
-    return typeof object === 'object' &&
-      object !== null &&
-      object.$$typeof === REACT_ELEMENT_TYPE;
-  };
-
-  // By explicitly using `prop-types` you are opting into new development behavior.
-  // http://fb.me/prop-types-in-prod
-  var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(43)(isValidElement, throwOnDirectAccess);
-} else {
-  // By explicitly using `prop-types` you are opting into new production behavior.
-  // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(44)();
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 43 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var emptyFunction = __webpack_require__(1);
-var invariant = __webpack_require__(4);
-var warning = __webpack_require__(6);
-var assign = __webpack_require__(3);
-
-var ReactPropTypesSecret = __webpack_require__(8);
-var checkPropTypes = __webpack_require__(7);
-
-module.exports = function(isValidElement, throwOnDirectAccess) {
-  /* global Symbol */
-  var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
-  var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
-
-  /**
-   * Returns the iterator method function contained on the iterable object.
-   *
-   * Be sure to invoke the function with the iterable as context:
-   *
-   *     var iteratorFn = getIteratorFn(myIterable);
-   *     if (iteratorFn) {
-   *       var iterator = iteratorFn.call(myIterable);
-   *       ...
-   *     }
-   *
-   * @param {?object} maybeIterable
-   * @return {?function}
-   */
-  function getIteratorFn(maybeIterable) {
-    var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
-    if (typeof iteratorFn === 'function') {
-      return iteratorFn;
-    }
-  }
-
-  /**
-   * Collection of methods that allow declaration and validation of props that are
-   * supplied to React components. Example usage:
-   *
-   *   var Props = require('ReactPropTypes');
-   *   var MyArticle = React.createClass({
-   *     propTypes: {
-   *       // An optional string prop named "description".
-   *       description: Props.string,
-   *
-   *       // A required enum prop named "category".
-   *       category: Props.oneOf(['News','Photos']).isRequired,
-   *
-   *       // A prop named "dialog" that requires an instance of Dialog.
-   *       dialog: Props.instanceOf(Dialog).isRequired
-   *     },
-   *     render: function() { ... }
-   *   });
-   *
-   * A more formal specification of how these methods are used:
-   *
-   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
-   *   decl := ReactPropTypes.{type}(.isRequired)?
-   *
-   * Each and every declaration produces a function with the same signature. This
-   * allows the creation of custom validation functions. For example:
-   *
-   *  var MyLink = React.createClass({
-   *    propTypes: {
-   *      // An optional string or URI prop named "href".
-   *      href: function(props, propName, componentName) {
-   *        var propValue = props[propName];
-   *        if (propValue != null && typeof propValue !== 'string' &&
-   *            !(propValue instanceof URI)) {
-   *          return new Error(
-   *            'Expected a string or an URI for ' + propName + ' in ' +
-   *            componentName
-   *          );
-   *        }
-   *      }
-   *    },
-   *    render: function() {...}
-   *  });
-   *
-   * @internal
-   */
-
-  var ANONYMOUS = '<<anonymous>>';
-
-  // Important!
-  // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
-  var ReactPropTypes = {
-    array: createPrimitiveTypeChecker('array'),
-    bool: createPrimitiveTypeChecker('boolean'),
-    func: createPrimitiveTypeChecker('function'),
-    number: createPrimitiveTypeChecker('number'),
-    object: createPrimitiveTypeChecker('object'),
-    string: createPrimitiveTypeChecker('string'),
-    symbol: createPrimitiveTypeChecker('symbol'),
-
-    any: createAnyTypeChecker(),
-    arrayOf: createArrayOfTypeChecker,
-    element: createElementTypeChecker(),
-    instanceOf: createInstanceTypeChecker,
-    node: createNodeChecker(),
-    objectOf: createObjectOfTypeChecker,
-    oneOf: createEnumTypeChecker,
-    oneOfType: createUnionTypeChecker,
-    shape: createShapeTypeChecker,
-    exact: createStrictShapeTypeChecker,
-  };
-
-  /**
-   * inlined Object.is polyfill to avoid requiring consumers ship their own
-   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
-   */
-  /*eslint-disable no-self-compare*/
-  function is(x, y) {
-    // SameValue algorithm
-    if (x === y) {
-      // Steps 1-5, 7-10
-      // Steps 6.b-6.e: +0 != -0
-      return x !== 0 || 1 / x === 1 / y;
-    } else {
-      // Step 6.a: NaN == NaN
-      return x !== x && y !== y;
-    }
-  }
-  /*eslint-enable no-self-compare*/
-
-  /**
-   * We use an Error-like object for backward compatibility as people may call
-   * PropTypes directly and inspect their output. However, we don't use real
-   * Errors anymore. We don't inspect their stack anyway, and creating them
-   * is prohibitively expensive if they are created too often, such as what
-   * happens in oneOfType() for any type before the one that matched.
-   */
-  function PropTypeError(message) {
-    this.message = message;
-    this.stack = '';
-  }
-  // Make `instanceof Error` still work for returned errors.
-  PropTypeError.prototype = Error.prototype;
-
-  function createChainableTypeChecker(validate) {
-    if (process.env.NODE_ENV !== 'production') {
-      var manualPropTypeCallCache = {};
-      var manualPropTypeWarningCount = 0;
-    }
-    function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
-      componentName = componentName || ANONYMOUS;
-      propFullName = propFullName || propName;
-
-      if (secret !== ReactPropTypesSecret) {
-        if (throwOnDirectAccess) {
-          // New behavior only for users of `prop-types` package
-          invariant(
-            false,
-            'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
-            'Use `PropTypes.checkPropTypes()` to call them. ' +
-            'Read more at http://fb.me/use-check-prop-types'
-          );
-        } else if (process.env.NODE_ENV !== 'production' && typeof console !== 'undefined') {
-          // Old behavior for people using React.PropTypes
-          var cacheKey = componentName + ':' + propName;
-          if (
-            !manualPropTypeCallCache[cacheKey] &&
-            // Avoid spamming the console because they are often not actionable except for lib authors
-            manualPropTypeWarningCount < 3
-          ) {
-            warning(
-              false,
-              'You are manually calling a React.PropTypes validation ' +
-              'function for the `%s` prop on `%s`. This is deprecated ' +
-              'and will throw in the standalone `prop-types` package. ' +
-              'You may be seeing this warning due to a third-party PropTypes ' +
-              'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.',
-              propFullName,
-              componentName
-            );
-            manualPropTypeCallCache[cacheKey] = true;
-            manualPropTypeWarningCount++;
-          }
-        }
-      }
-      if (props[propName] == null) {
-        if (isRequired) {
-          if (props[propName] === null) {
-            return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required ' + ('in `' + componentName + '`, but its value is `null`.'));
-          }
-          return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required in ' + ('`' + componentName + '`, but its value is `undefined`.'));
-        }
-        return null;
-      } else {
-        return validate(props, propName, componentName, location, propFullName);
-      }
-    }
-
-    var chainedCheckType = checkType.bind(null, false);
-    chainedCheckType.isRequired = checkType.bind(null, true);
-
-    return chainedCheckType;
-  }
-
-  function createPrimitiveTypeChecker(expectedType) {
-    function validate(props, propName, componentName, location, propFullName, secret) {
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== expectedType) {
-        // `propValue` being instance of, say, date/regexp, pass the 'object'
-        // check, but we can offer a more precise error message here rather than
-        // 'of type `object`'.
-        var preciseType = getPreciseType(propValue);
-
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createAnyTypeChecker() {
-    return createChainableTypeChecker(emptyFunction.thatReturnsNull);
-  }
-
-  function createArrayOfTypeChecker(typeChecker) {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (typeof typeChecker !== 'function') {
-        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside arrayOf.');
-      }
-      var propValue = props[propName];
-      if (!Array.isArray(propValue)) {
-        var propType = getPropType(propValue);
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an array.'));
-      }
-      for (var i = 0; i < propValue.length; i++) {
-        var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret);
-        if (error instanceof Error) {
-          return error;
-        }
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createElementTypeChecker() {
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      if (!isValidElement(propValue)) {
-        var propType = getPropType(propValue);
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createInstanceTypeChecker(expectedClass) {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (!(props[propName] instanceof expectedClass)) {
-        var expectedClassName = expectedClass.name || ANONYMOUS;
-        var actualClassName = getClassName(props[propName]);
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createEnumTypeChecker(expectedValues) {
-    if (!Array.isArray(expectedValues)) {
-      process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.') : void 0;
-      return emptyFunction.thatReturnsNull;
-    }
-
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      for (var i = 0; i < expectedValues.length; i++) {
-        if (is(propValue, expectedValues[i])) {
-          return null;
-        }
-      }
-
-      var valuesString = JSON.stringify(expectedValues);
-      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + propValue + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createObjectOfTypeChecker(typeChecker) {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (typeof typeChecker !== 'function') {
-        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside objectOf.');
-      }
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== 'object') {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
-      }
-      for (var key in propValue) {
-        if (propValue.hasOwnProperty(key)) {
-          var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
-          if (error instanceof Error) {
-            return error;
-          }
-        }
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createUnionTypeChecker(arrayOfTypeCheckers) {
-    if (!Array.isArray(arrayOfTypeCheckers)) {
-      process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
-      return emptyFunction.thatReturnsNull;
-    }
-
-    for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
-      var checker = arrayOfTypeCheckers[i];
-      if (typeof checker !== 'function') {
-        warning(
-          false,
-          'Invalid argument supplied to oneOfType. Expected an array of check functions, but ' +
-          'received %s at index %s.',
-          getPostfixForTypeWarning(checker),
-          i
-        );
-        return emptyFunction.thatReturnsNull;
-      }
-    }
-
-    function validate(props, propName, componentName, location, propFullName) {
-      for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
-        var checker = arrayOfTypeCheckers[i];
-        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
-          return null;
-        }
-      }
-
-      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createNodeChecker() {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (!isNode(props[propName])) {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`, expected a ReactNode.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createShapeTypeChecker(shapeTypes) {
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== 'object') {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
-      }
-      for (var key in shapeTypes) {
-        var checker = shapeTypes[key];
-        if (!checker) {
-          continue;
-        }
-        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
-        if (error) {
-          return error;
-        }
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createStrictShapeTypeChecker(shapeTypes) {
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== 'object') {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
-      }
-      // We need to check all keys in case some are required but missing from
-      // props.
-      var allKeys = assign({}, props[propName], shapeTypes);
-      for (var key in allKeys) {
-        var checker = shapeTypes[key];
-        if (!checker) {
-          return new PropTypeError(
-            'Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' +
-            '\nBad object: ' + JSON.stringify(props[propName], null, '  ') +
-            '\nValid keys: ' +  JSON.stringify(Object.keys(shapeTypes), null, '  ')
-          );
-        }
-        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
-        if (error) {
-          return error;
-        }
-      }
-      return null;
-    }
-
-    return createChainableTypeChecker(validate);
-  }
-
-  function isNode(propValue) {
-    switch (typeof propValue) {
-      case 'number':
-      case 'string':
-      case 'undefined':
-        return true;
-      case 'boolean':
-        return !propValue;
-      case 'object':
-        if (Array.isArray(propValue)) {
-          return propValue.every(isNode);
-        }
-        if (propValue === null || isValidElement(propValue)) {
-          return true;
-        }
-
-        var iteratorFn = getIteratorFn(propValue);
-        if (iteratorFn) {
-          var iterator = iteratorFn.call(propValue);
-          var step;
-          if (iteratorFn !== propValue.entries) {
-            while (!(step = iterator.next()).done) {
-              if (!isNode(step.value)) {
-                return false;
-              }
-            }
-          } else {
-            // Iterator will provide entry [k,v] tuples rather than values.
-            while (!(step = iterator.next()).done) {
-              var entry = step.value;
-              if (entry) {
-                if (!isNode(entry[1])) {
-                  return false;
-                }
-              }
-            }
-          }
-        } else {
-          return false;
-        }
-
-        return true;
-      default:
-        return false;
-    }
-  }
-
-  function isSymbol(propType, propValue) {
-    // Native Symbol.
-    if (propType === 'symbol') {
-      return true;
-    }
-
-    // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
-    if (propValue['@@toStringTag'] === 'Symbol') {
-      return true;
-    }
-
-    // Fallback for non-spec compliant Symbols which are polyfilled.
-    if (typeof Symbol === 'function' && propValue instanceof Symbol) {
-      return true;
-    }
-
-    return false;
-  }
-
-  // Equivalent of `typeof` but with special handling for array and regexp.
-  function getPropType(propValue) {
-    var propType = typeof propValue;
-    if (Array.isArray(propValue)) {
-      return 'array';
-    }
-    if (propValue instanceof RegExp) {
-      // Old webkits (at least until Android 4.0) return 'function' rather than
-      // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
-      // passes PropTypes.object.
-      return 'object';
-    }
-    if (isSymbol(propType, propValue)) {
-      return 'symbol';
-    }
-    return propType;
-  }
-
-  // This handles more types than `getPropType`. Only used for error messages.
-  // See `createPrimitiveTypeChecker`.
-  function getPreciseType(propValue) {
-    if (typeof propValue === 'undefined' || propValue === null) {
-      return '' + propValue;
-    }
-    var propType = getPropType(propValue);
-    if (propType === 'object') {
-      if (propValue instanceof Date) {
-        return 'date';
-      } else if (propValue instanceof RegExp) {
-        return 'regexp';
-      }
-    }
-    return propType;
-  }
-
-  // Returns a string that is postfixed to a warning about an invalid type.
-  // For example, "undefined" or "of type array"
-  function getPostfixForTypeWarning(value) {
-    var type = getPreciseType(value);
-    switch (type) {
-      case 'array':
-      case 'object':
-        return 'an ' + type;
-      case 'boolean':
-      case 'date':
-      case 'regexp':
-        return 'a ' + type;
-      default:
-        return type;
-    }
-  }
-
-  // Returns class name of the object, if any.
-  function getClassName(propValue) {
-    if (!propValue.constructor || !propValue.constructor.name) {
-      return ANONYMOUS;
-    }
-    return propValue.constructor.name;
-  }
-
-  ReactPropTypes.checkPropTypes = checkPropTypes;
-  ReactPropTypes.PropTypes = ReactPropTypes;
-
-  return ReactPropTypes;
-};
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 44 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var emptyFunction = __webpack_require__(1);
-var invariant = __webpack_require__(4);
-var ReactPropTypesSecret = __webpack_require__(8);
-
-module.exports = function() {
-  function shim(props, propName, componentName, location, propFullName, secret) {
-    if (secret === ReactPropTypesSecret) {
-      // It is still safe when called from React.
-      return;
-    }
-    invariant(
-      false,
-      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
-      'Use PropTypes.checkPropTypes() to call them. ' +
-      'Read more at http://fb.me/use-check-prop-types'
-    );
-  };
-  shim.isRequired = shim;
-  function getShim() {
-    return shim;
-  };
-  // Important!
-  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
-  var ReactPropTypes = {
-    array: shim,
-    bool: shim,
-    func: shim,
-    number: shim,
-    object: shim,
-    string: shim,
-    symbol: shim,
-
-    any: shim,
-    arrayOf: getShim,
-    element: shim,
-    instanceOf: getShim,
-    node: shim,
-    objectOf: getShim,
-    oneOf: getShim,
-    oneOfType: getShim,
-    shape: getShim,
-    exact: getShim
-  };
-
-  ReactPropTypes.checkPropTypes = emptyFunction;
-  ReactPropTypes.PropTypes = ReactPropTypes;
-
-  return ReactPropTypes;
-};
-
-
-/***/ }),
-/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19696,34 +19054,1471 @@ module.exports = function() {
 Object.defineProperty(exports, "__esModule", {
    value: true
 });
-var Block = exports.Block = function Block(props) {
-   var name = props.name;
-   var _props$data = props.data,
-       age = _props$data.age,
-       sex = _props$data.sex;
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _dec, _class;
+
+var _coreDecorators = __webpack_require__(43);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Block = (_dec = (0, _coreDecorators.autobind)(), _dec(_class = function (_React$Component) {
+   _inherits(Block, _React$Component);
+
+   function Block(props) {
+      _classCallCheck(this, Block);
+
+      /* this.nick = "Sasha";*/
+      var _this = _possibleConstructorReturn(this, (Block.__proto__ || Object.getPrototypeOf(Block)).call(this, props));
+
+      _this.state = {
+         buyItems: ['metal', 'rock', 'core']
+      };
+      return _this;
+   }
+
+   _createClass(Block, [{
+      key: 'say',
+      value: function say() {
+         console.log(this.props.surname + ' is mine');
+      }
+   }, {
+      key: 'render',
+      value: function render() {
+         var name = this.props.name;
+         var _props$data = this.props.data,
+             age = _props$data.age,
+             sex = _props$data.sex;
+         var buyItems = this.state.buyItems;
 
 
-   return React.createElement(
-      "div",
-      null,
-      React.createElement(
-         "p",
-         null,
-         name
-      ),
-      React.createElement(
-         "p",
-         null,
-         age
-      ),
-      React.createElement(
-         "p",
-         null,
-         sex
-      )
-   );
-};
+         return React.createElement(
+            'div',
+            null,
+            React.createElement(
+               'p',
+               null,
+               name
+            ),
+            React.createElement(
+               'p',
+               null,
+               age
+            ),
+            React.createElement(
+               'p',
+               null,
+               sex
+            ),
+            React.createElement(
+               'p',
+               { onClick: this.say },
+               '\u041A\u043B\u0438\u043A'
+            ),
+            buyItems.map(function (item, i) {
+               return React.createElement(
+                  'span',
+                  { key: i },
+                  item
+               );
+            })
+         );
+      }
+   }]);
+
+   return Block;
+}(React.Component)) || _class);
+
+/*
+class BlockItem extends Block {
+   say() {
+      super.say();
+      console.log(`${this.nick} is mine2`);
+   }
+}
+*/
+
+exports.default = Block;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 43 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/lazy-initialize.js
+
+var defineProperty = Object.defineProperty;
+
+
+function handleDescriptor(target, key, descriptor) {
+  var configurable = descriptor.configurable,
+      enumerable = descriptor.enumerable,
+      initializer = descriptor.initializer,
+      value = descriptor.value;
+
+  return {
+    configurable: configurable,
+    enumerable: enumerable,
+
+    get: function get() {
+      // This happens if someone accesses the
+      // property directly on the prototype
+      if (this === target) {
+        return;
+      }
+
+      var ret = initializer ? initializer.call(this) : value;
+
+      defineProperty(this, key, {
+        configurable: configurable,
+        enumerable: enumerable,
+        writable: true,
+        value: ret
+      });
+
+      return ret;
+    },
+
+
+    set: createDefaultSetter(key)
+  };
+}
+
+function lazyInitialize() {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return decorate(handleDescriptor, args);
+}
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/private/utils.js
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _desc, _value, _class, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5;
+
+function _initDefineProp(target, property, descriptor, context) {
+  if (!descriptor) return;
+  Object.defineProperty(target, property, {
+    enumerable: descriptor.enumerable,
+    configurable: descriptor.configurable,
+    writable: descriptor.writable,
+    value: descriptor.initializer ? descriptor.initializer.call(context) : void 0
+  });
+}
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
+  var desc = {};
+  Object['ke' + 'ys'](descriptor).forEach(function (key) {
+    desc[key] = descriptor[key];
+  });
+  desc.enumerable = !!desc.enumerable;
+  desc.configurable = !!desc.configurable;
+
+  if ('value' in desc || desc.initializer) {
+    desc.writable = true;
+  }
+
+  desc = decorators.slice().reverse().reduce(function (desc, decorator) {
+    return decorator(target, property, desc) || desc;
+  }, desc);
+
+  if (context && desc.initializer !== void 0) {
+    desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
+    desc.initializer = undefined;
+  }
+
+  if (desc.initializer === void 0) {
+    Object['define' + 'Property'](target, property, desc);
+    desc = null;
+  }
+
+  return desc;
+}
+
+function _initializerWarningHelper(descriptor, context) {
+  throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
+}
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+
+
+var utils_defineProperty = Object.defineProperty,
+    getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor,
+    getOwnPropertyNames = Object.getOwnPropertyNames,
+    getOwnPropertySymbols = Object.getOwnPropertySymbols;
+
+
+function isDescriptor(desc) {
+  if (!desc || !desc.hasOwnProperty) {
+    return false;
+  }
+
+  var keys = ['value', 'initializer', 'get', 'set'];
+
+  for (var i = 0, l = keys.length; i < l; i++) {
+    if (desc.hasOwnProperty(keys[i])) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+function decorate(handleDescriptor, entryArgs) {
+  if (isDescriptor(entryArgs[entryArgs.length - 1])) {
+    return handleDescriptor.apply(undefined, _toConsumableArray(entryArgs).concat([[]]));
+  } else {
+    return function () {
+      return handleDescriptor.apply(undefined, _toConsumableArray(Array.prototype.slice.call(arguments)).concat([entryArgs]));
+    };
+  }
+}
+
+var Meta = (_class = function Meta() {
+  _classCallCheck(this, Meta);
+
+  _initDefineProp(this, 'debounceTimeoutIds', _descriptor, this);
+
+  _initDefineProp(this, 'throttleTimeoutIds', _descriptor2, this);
+
+  _initDefineProp(this, 'throttlePreviousTimestamps', _descriptor3, this);
+
+  _initDefineProp(this, 'throttleTrailingArgs', _descriptor4, this);
+
+  _initDefineProp(this, 'profileLastRan', _descriptor5, this);
+}, (_descriptor = _applyDecoratedDescriptor(_class.prototype, 'debounceTimeoutIds', [lazyInitialize], {
+  enumerable: true,
+  initializer: function initializer() {
+    return {};
+  }
+}), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, 'throttleTimeoutIds', [lazyInitialize], {
+  enumerable: true,
+  initializer: function initializer() {
+    return {};
+  }
+}), _descriptor3 = _applyDecoratedDescriptor(_class.prototype, 'throttlePreviousTimestamps', [lazyInitialize], {
+  enumerable: true,
+  initializer: function initializer() {
+    return {};
+  }
+}), _descriptor4 = _applyDecoratedDescriptor(_class.prototype, 'throttleTrailingArgs', [lazyInitialize], {
+  enumerable: true,
+  initializer: function initializer() {
+    return null;
+  }
+}), _descriptor5 = _applyDecoratedDescriptor(_class.prototype, 'profileLastRan', [lazyInitialize], {
+  enumerable: true,
+  initializer: function initializer() {
+    return null;
+  }
+})), _class);
+
+
+var META_KEY = typeof Symbol === 'function' ? Symbol('__core_decorators__') : '__core_decorators__';
+
+function metaFor(obj) {
+  if (obj.hasOwnProperty(META_KEY) === false) {
+    utils_defineProperty(obj, META_KEY, {
+      // Defaults: NOT enumerable, configurable, or writable
+      value: new Meta()
+    });
+  }
+
+  return obj[META_KEY];
+}
+
+var getOwnKeys = getOwnPropertySymbols ? function (object) {
+  return getOwnPropertyNames(object).concat(getOwnPropertySymbols(object));
+} : getOwnPropertyNames;
+
+function getOwnPropertyDescriptors(obj) {
+  var descs = {};
+
+  getOwnKeys(obj).forEach(function (key) {
+    return descs[key] = getOwnPropertyDescriptor(obj, key);
+  });
+
+  return descs;
+}
+
+function createDefaultSetter(key) {
+  return function set(newValue) {
+    Object.defineProperty(this, key, {
+      configurable: true,
+      writable: true,
+      // IS enumerable when reassigned by the outside word
+      enumerable: true,
+      value: newValue
+    });
+
+    return newValue;
+  };
+}
+
+function bind(fn, context) {
+  if (fn.bind) {
+    return fn.bind(context);
+  } else {
+    return function __autobind__() {
+      return fn.apply(context, arguments);
+    };
+  }
+}
+
+var warn = function () {
+  if ((typeof console === 'undefined' ? 'undefined' : _typeof(console)) !== 'object' || !console || typeof console.warn !== 'function') {
+    return function () {};
+  } else {
+    return bind(console.warn, console);
+  }
+}();
+
+var seenDeprecations = {};
+function internalDeprecation(msg) {
+  if (seenDeprecations[msg] !== true) {
+    seenDeprecations[msg] = true;
+    warn('DEPRECATION: ' + msg);
+  }
+}
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/override.js
+var override__typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function override__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var GENERIC_FUNCTION_ERROR = '{child} does not properly override {parent}';
+var FUNCTION_REGEXP = /^function ([_$a-zA-Z\xA0-\uFFFF][_$a-zA-Z0-9\xA0-\uFFFF]*)?(\([^\)]*\))[\s\S]+$/;
+
+var SyntaxErrorReporter = function () {
+  _createClass(SyntaxErrorReporter, [{
+    key: '_getTopic',
+    value: function _getTopic(descriptor) {
+      if (descriptor === undefined) {
+        return null;
+      }
+
+      if ('value' in descriptor) {
+        return descriptor.value;
+      }
+
+      if ('get' in descriptor) {
+        return descriptor.get;
+      }
+
+      if ('set' in descriptor) {
+        return descriptor.set;
+      }
+    }
+  }, {
+    key: '_extractTopicSignature',
+    value: function _extractTopicSignature(topic) {
+      switch (typeof topic === 'undefined' ? 'undefined' : override__typeof(topic)) {
+        case 'function':
+          return this._extractFunctionSignature(topic);
+        default:
+          return this.key;
+      }
+    }
+  }, {
+    key: '_extractFunctionSignature',
+    value: function _extractFunctionSignature(fn) {
+      var _this = this;
+
+      return fn.toString().replace(FUNCTION_REGEXP, function (match) {
+        var name = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _this.key;
+        var params = arguments[2];
+        return name + params;
+      });
+    }
+  }, {
+    key: 'key',
+    get: function get() {
+      return this.childDescriptor.key;
+    }
+  }, {
+    key: 'parentNotation',
+    get: function get() {
+      return this.parentKlass.constructor.name + '#' + this.parentPropertySignature;
+    }
+  }, {
+    key: 'childNotation',
+    get: function get() {
+      return this.childKlass.constructor.name + '#' + this.childPropertySignature;
+    }
+  }, {
+    key: 'parentTopic',
+    get: function get() {
+      return this._getTopic(this.parentDescriptor);
+    }
+  }, {
+    key: 'childTopic',
+    get: function get() {
+      return this._getTopic(this.childDescriptor);
+    }
+  }, {
+    key: 'parentPropertySignature',
+    get: function get() {
+      return this._extractTopicSignature(this.parentTopic);
+    }
+  }, {
+    key: 'childPropertySignature',
+    get: function get() {
+      return this._extractTopicSignature(this.childTopic);
+    }
+  }]);
+
+  function SyntaxErrorReporter(parentKlass, childKlass, parentDescriptor, childDescriptor) {
+    override__classCallCheck(this, SyntaxErrorReporter);
+
+    this.parentKlass = parentKlass;
+    this.childKlass = childKlass;
+    this.parentDescriptor = parentDescriptor;
+    this.childDescriptor = childDescriptor;
+  }
+
+  _createClass(SyntaxErrorReporter, [{
+    key: 'assert',
+    value: function assert(condition) {
+      var msg = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+
+      if (condition !== true) {
+        this.error(GENERIC_FUNCTION_ERROR + msg);
+      }
+    }
+  }, {
+    key: 'error',
+    value: function error(msg) {
+      var _this2 = this;
+
+      msg = msg
+      // Replace lazily, because they actually might not
+      // be available in all cases
+      .replace('{parent}', function (m) {
+        return _this2.parentNotation;
+      }).replace('{child}', function (m) {
+        return _this2.childNotation;
+      });
+      throw new SyntaxError(msg);
+    }
+  }]);
+
+  return SyntaxErrorReporter;
+}();
+
+function getDescriptorType(descriptor) {
+  if (descriptor.hasOwnProperty('value')) {
+    return 'data';
+  }
+
+  if (descriptor.hasOwnProperty('get') || descriptor.hasOwnProperty('set')) {
+    return 'accessor';
+  }
+
+  // If none of them exist, browsers treat it as
+  // a data descriptor with a value of `undefined`
+  return 'data';
+}
+
+function checkFunctionSignatures(parent, child, reporter) {
+  reporter.assert(parent.length === child.length);
+}
+
+function checkDataDescriptors(parent, child, reporter) {
+  var parentValueType = override__typeof(parent.value);
+  var childValueType = override__typeof(child.value);
+
+  if (parentValueType === 'undefined' && childValueType === 'undefined') {
+    // class properties can be any expression, which isn't ran until the
+    // the instance is created, so we can't reliably get type information
+    // for them yet (per spec). Perhaps when Babel includes flow-type info
+    // in runtime? Tried regex solutions, but super hacky and only feasible
+    // on primitives, which is confusing for usage...
+    reporter.error('descriptor values are both undefined. (class properties are are not currently supported)\'');
+  }
+
+  if (parentValueType !== childValueType) {
+    var isFunctionOverUndefined = childValueType === 'function' && parentValueType === undefined;
+    // Even though we don't support class properties, this
+    // will still handle more than just functions, just in case.
+    // Shadowing an undefined value is an error if the inherited
+    // value was undefined (usually a class property, not a method)
+    if (isFunctionOverUndefined || parentValueType !== undefined) {
+      reporter.error('value types do not match. {parent} is "' + parentValueType + '", {child} is "' + childValueType + '"');
+    }
+  }
+
+  // Switch, in preparation for supporting more types
+  switch (childValueType) {
+    case 'function':
+      checkFunctionSignatures(parent.value, child.value, reporter);
+      break;
+
+    default:
+      reporter.error('Unexpected error. Please file a bug with: {parent} is "' + parentValueType + '", {child} is "' + childValueType + '"');
+      break;
+  }
+}
+
+function checkAccessorDescriptors(parent, child, reporter) {
+  var parentHasGetter = typeof parent.get === 'function';
+  var childHasGetter = typeof child.get === 'function';
+  var parentHasSetter = typeof parent.set === 'function';
+  var childHasSetter = typeof child.set === 'function';
+
+  if (parentHasGetter || childHasGetter) {
+    if (!parentHasGetter && parentHasSetter) {
+      reporter.error('{parent} is setter but {child} is getter');
+    }
+
+    if (!childHasGetter && childHasSetter) {
+      reporter.error('{parent} is getter but {child} is setter');
+    }
+
+    checkFunctionSignatures(parent.get, child.get, reporter);
+  }
+
+  if (parentHasSetter || childHasSetter) {
+    if (!parentHasSetter && parentHasGetter) {
+      reporter.error('{parent} is getter but {child} is setter');
+    }
+
+    if (!childHasSetter && childHasGetter) {
+      reporter.error('{parent} is setter but {child} is getter');
+    }
+
+    checkFunctionSignatures(parent.set, child.set, reporter);
+  }
+}
+
+function checkDescriptors(parent, child, reporter) {
+  var parentType = getDescriptorType(parent);
+  var childType = getDescriptorType(child);
+
+  if (parentType !== childType) {
+    reporter.error('descriptor types do not match. {parent} is "' + parentType + '", {child} is "' + childType + '"');
+  }
+
+  switch (childType) {
+    case 'data':
+      checkDataDescriptors(parent, child, reporter);
+      break;
+
+    case 'accessor':
+      checkAccessorDescriptors(parent, child, reporter);
+      break;
+  }
+}
+
+var suggestionTransforms = [function (key) {
+  return key.toLowerCase();
+}, function (key) {
+  return key.toUpperCase();
+}, function (key) {
+  return key + 's';
+}, function (key) {
+  return key.slice(0, -1);
+}, function (key) {
+  return key.slice(1, key.length);
+}];
+
+function findPossibleAlternatives(superKlass, key) {
+  for (var i = 0, l = suggestionTransforms.length; i < l; i++) {
+    var fn = suggestionTransforms[i];
+    var suggestion = fn(key);
+
+    if (suggestion in superKlass) {
+      return suggestion;
+    }
+  }
+
+  return null;
+}
+
+function override_handleDescriptor(target, key, descriptor) {
+  descriptor.key = key;
+  var superKlass = Object.getPrototypeOf(target);
+  var superDescriptor = Object.getOwnPropertyDescriptor(superKlass, key);
+  var reporter = new SyntaxErrorReporter(superKlass, target, superDescriptor, descriptor);
+
+  if (superDescriptor === undefined) {
+    var suggestedKey = findPossibleAlternatives(superKlass, key);
+    var suggestion = suggestedKey ? '\n\n  Did you mean "' + suggestedKey + '"?' : '';
+    reporter.error('No descriptor matching {child} was found on the prototype chain.' + suggestion);
+  }
+
+  checkDescriptors(superDescriptor, descriptor, reporter);
+
+  return descriptor;
+}
+
+function override() {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return decorate(override_handleDescriptor, args);
+}
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/deprecate.js
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+
+
+var DEFAULT_MSG = 'This function will be removed in future versions.';
+
+function deprecate_handleDescriptor(target, key, descriptor, _ref) {
+  var _ref2 = _slicedToArray(_ref, 2),
+      _ref2$ = _ref2[0],
+      msg = _ref2$ === undefined ? DEFAULT_MSG : _ref2$,
+      _ref2$2 = _ref2[1],
+      options = _ref2$2 === undefined ? {} : _ref2$2;
+
+  if (typeof descriptor.value !== 'function') {
+    throw new SyntaxError('Only functions can be marked as deprecated');
+  }
+
+  var methodSignature = target.constructor.name + '#' + key;
+
+  if (options.url) {
+    msg += '\n\n    See ' + options.url + ' for more details.\n\n';
+  }
+
+  return _extends({}, descriptor, {
+    value: function deprecationWrapper() {
+      warn('DEPRECATION ' + methodSignature + ': ' + msg);
+      return descriptor.value.apply(this, arguments);
+    }
+  });
+}
+
+function deprecate() {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return decorate(deprecate_handleDescriptor, args);
+}
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/suppress-warnings.js
+var suppress_warnings__extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var suppress_warnings__typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+
+
+function suppressedWarningNoop() {
+  // Warnings are currently suppressed via @suppressWarnings
+}
+
+function applyWithoutWarnings(context, fn, args) {
+  if ((typeof console === 'undefined' ? 'undefined' : suppress_warnings__typeof(console)) === 'object') {
+    var nativeWarn = console.warn;
+    console.warn = suppressedWarningNoop;
+    var ret = fn.apply(context, args);
+    console.warn = nativeWarn;
+    return ret;
+  } else {
+    return fn.apply(context, args);
+  }
+}
+
+function suppress_warnings_handleDescriptor(target, key, descriptor) {
+  return suppress_warnings__extends({}, descriptor, {
+    value: function suppressWarningsWrapper() {
+      return applyWithoutWarnings(this, descriptor.value, arguments);
+    }
+  });
+}
+
+function suppressWarnings() {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return decorate(suppress_warnings_handleDescriptor, args);
+}
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/memoize.js
+var memoize__extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+function toObject(cache, value) {
+  if (value === Object(value)) {
+    return value;
+  }
+  return cache[value] || (cache[value] = {});
+}
+
+function applyAndCache(context, fn, args, cache, signature) {
+  var ret = fn.apply(context, args);
+  cache[signature] = ret;
+  return ret;
+}
+
+function metaForDescriptor(descriptor) {
+  var fn = void 0,
+      wrapKey = void 0;
+
+  // This is ugly code, but way faster than other
+  // ways I tried that *looked* pretty
+
+  if (descriptor.value) {
+    fn = descriptor.value;
+    wrapKey = 'value';
+  } else if (descriptor.get) {
+    fn = descriptor.get;
+    wrapKey = 'get';
+  } else if (descriptor.set) {
+    fn = descriptor.set;
+    wrapKey = 'set';
+  }
+
+  return { fn: fn, wrapKey: wrapKey };
+}
+
+function memoize_handleDescriptor(target, key, descriptor) {
+  var _metaForDescriptor = metaForDescriptor(descriptor),
+      fn = _metaForDescriptor.fn,
+      wrapKey = _metaForDescriptor.wrapKey;
+
+  var argumentCache = new WeakMap();
+  var signatureCache = Object.create(null);
+  var primativeRefCache = Object.create(null);
+  var argumentIdCounter = 0;
+
+  return memoize__extends({}, descriptor, _defineProperty({}, wrapKey, function memoizeWrapper() {
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    var signature = '0';
+
+    for (var i = 0, l = args.length; i < l; i++) {
+      var arg = args[i];
+      var argRef = toObject(primativeRefCache, arg);
+      var argKey = argumentCache.get(argRef);
+
+      if (argKey === undefined) {
+        argKey = ++argumentIdCounter;
+        argumentCache.set(argRef, argKey);
+      }
+
+      signature += argKey;
+    }
+
+    return signatureCache[signature] || applyAndCache(this, fn, arguments, signatureCache, signature);
+  }));
+}
+
+function memoize() {
+  internalDeprecation('@memoize is deprecated and will be removed shortly. Use @memoize from lodash-decorators.\n\n  https://www.npmjs.com/package/lodash-decorators');
+
+  for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+    args[_key2] = arguments[_key2];
+  }
+
+  return decorate(memoize_handleDescriptor, args);
+}
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/autobind.js
+function autobind__toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+
+var autobind_defineProperty = Object.defineProperty,
+    getPrototypeOf = Object.getPrototypeOf;
+
+
+var mapStore = void 0;
+
+function getBoundSuper(obj, fn) {
+  if (typeof WeakMap === 'undefined') {
+    throw new Error('Using @autobind on ' + fn.name + '() requires WeakMap support due to its use of super.' + fn.name + '()\n      See https://github.com/jayphelps/core-decorators.js/issues/20');
+  }
+
+  if (!mapStore) {
+    mapStore = new WeakMap();
+  }
+
+  if (mapStore.has(obj) === false) {
+    mapStore.set(obj, new WeakMap());
+  }
+
+  var superStore = mapStore.get(obj);
+
+  if (superStore.has(fn) === false) {
+    superStore.set(fn, bind(fn, obj));
+  }
+
+  return superStore.get(fn);
+}
+
+function autobindClass(klass) {
+  var descs = getOwnPropertyDescriptors(klass.prototype);
+  var keys = getOwnKeys(descs);
+
+  for (var i = 0, l = keys.length; i < l; i++) {
+    var key = keys[i];
+    var desc = descs[key];
+
+    if (typeof desc.value !== 'function' || key === 'constructor') {
+      continue;
+    }
+
+    autobind_defineProperty(klass.prototype, key, autobindMethod(klass.prototype, key, desc));
+  }
+}
+
+function autobindMethod(target, key, _ref) {
+  var fn = _ref.value,
+      configurable = _ref.configurable,
+      enumerable = _ref.enumerable;
+
+  if (typeof fn !== 'function') {
+    throw new SyntaxError('@autobind can only be used on functions, not: ' + fn);
+  }
+
+  var constructor = target.constructor;
+
+
+  return {
+    configurable: configurable,
+    enumerable: enumerable,
+
+    get: function get() {
+      // Class.prototype.key lookup
+      // Someone accesses the property directly on the prototype on which it is
+      // actually defined on, i.e. Class.prototype.hasOwnProperty(key)
+      if (this === target) {
+        return fn;
+      }
+
+      // Class.prototype.key lookup
+      // Someone accesses the property directly on a prototype but it was found
+      // up the chain, not defined directly on it
+      // i.e. Class.prototype.hasOwnProperty(key) == false && key in Class.prototype
+      if (this.constructor !== constructor && getPrototypeOf(this).constructor === constructor) {
+        return fn;
+      }
+
+      // Autobound method calling super.sameMethod() which is also autobound and so on.
+      if (this.constructor !== constructor && key in this.constructor.prototype) {
+        return getBoundSuper(this, fn);
+      }
+
+      var boundFn = bind(fn, this);
+
+      autobind_defineProperty(this, key, {
+        configurable: true,
+        writable: true,
+        // NOT enumerable when it's a bound method
+        enumerable: false,
+        value: boundFn
+      });
+
+      return boundFn;
+    },
+
+    set: createDefaultSetter(key)
+  };
+}
+
+function handle(args) {
+  if (args.length === 1) {
+    return autobindClass.apply(undefined, autobind__toConsumableArray(args));
+  } else {
+    return autobindMethod.apply(undefined, autobind__toConsumableArray(args));
+  }
+}
+
+function autobind() {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  if (args.length === 0) {
+    return function () {
+      return handle(arguments);
+    };
+  } else {
+    return handle(args);
+  }
+}
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/readonly.js
+
+
+function readonly_handleDescriptor(target, key, descriptor) {
+  descriptor.writable = false;
+  return descriptor;
+}
+
+function readonly() {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return decorate(readonly_handleDescriptor, args);
+}
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/enumerable.js
+
+
+function enumerable_handleDescriptor(target, key, descriptor) {
+  descriptor.enumerable = true;
+  return descriptor;
+}
+
+function enumerable_enumerable() {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return decorate(enumerable_handleDescriptor, args);
+}
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/nonenumerable.js
+
+
+function nonenumerable_handleDescriptor(target, key, descriptor) {
+  descriptor.enumerable = false;
+  return descriptor;
+}
+
+function nonenumerable() {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return decorate(nonenumerable_handleDescriptor, args);
+}
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/nonconfigurable.js
+
+
+function nonconfigurable_handleDescriptor(target, key, descriptor) {
+  descriptor.configurable = false;
+  return descriptor;
+}
+
+function nonconfigurable() {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return decorate(nonconfigurable_handleDescriptor, args);
+}
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/debounce.js
+var debounce__extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var debounce__slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+
+
+var DEFAULT_TIMEOUT = 300;
+
+function debounce_handleDescriptor(target, key, descriptor, _ref) {
+  var _ref2 = debounce__slicedToArray(_ref, 2),
+      _ref2$ = _ref2[0],
+      wait = _ref2$ === undefined ? DEFAULT_TIMEOUT : _ref2$,
+      _ref2$2 = _ref2[1],
+      immediate = _ref2$2 === undefined ? false : _ref2$2;
+
+  var callback = descriptor.value;
+
+  if (typeof callback !== 'function') {
+    throw new SyntaxError('Only functions can be debounced');
+  }
+
+  return debounce__extends({}, descriptor, {
+    value: function value() {
+      var _this = this;
+
+      var _metaFor = metaFor(this),
+          debounceTimeoutIds = _metaFor.debounceTimeoutIds;
+
+      var timeout = debounceTimeoutIds[key];
+      var callNow = immediate && !timeout;
+      var args = arguments;
+
+      clearTimeout(timeout);
+
+      debounceTimeoutIds[key] = setTimeout(function () {
+        delete debounceTimeoutIds[key];
+        if (!immediate) {
+          callback.apply(_this, args);
+        }
+      }, wait);
+
+      if (callNow) {
+        callback.apply(this, args);
+      }
+    }
+  });
+}
+
+function debounce() {
+  internalDeprecation('@debounce is deprecated and will be removed shortly. Use @debounce from lodash-decorators.\n\n  https://www.npmjs.com/package/lodash-decorators');
+
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return decorate(debounce_handleDescriptor, args);
+}
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/throttle.js
+var throttle__extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var throttle__slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+
+
+var throttle_DEFAULT_TIMEOUT = 300;
+
+function throttle_handleDescriptor(target, key, descriptor, _ref) {
+  var _ref2 = throttle__slicedToArray(_ref, 2),
+      _ref2$ = _ref2[0],
+      wait = _ref2$ === undefined ? throttle_DEFAULT_TIMEOUT : _ref2$,
+      _ref2$2 = _ref2[1],
+      options = _ref2$2 === undefined ? {} : _ref2$2;
+
+  var callback = descriptor.value;
+
+  if (typeof callback !== 'function') {
+    throw new SyntaxError('Only functions can be throttled');
+  }
+
+  if (options.leading !== false) {
+    options.leading = true;
+  }
+
+  if (options.trailing !== false) {
+    options.trailing = true;
+  }
+
+  return throttle__extends({}, descriptor, {
+    value: function value() {
+      var _this = this;
+
+      var meta = metaFor(this);
+      var throttleTimeoutIds = meta.throttleTimeoutIds,
+          throttlePreviousTimestamps = meta.throttlePreviousTimestamps;
+
+      var timeout = throttleTimeoutIds[key];
+      // last execute timestamp
+      var previous = throttlePreviousTimestamps[key] || 0;
+      var now = Date.now();
+
+      if (options.trailing) {
+        meta.throttleTrailingArgs = arguments;
+      }
+
+      // if first be called and disable the execution on the leading edge
+      // set last execute timestamp to now
+      if (!previous && options.leading === false) {
+        previous = now;
+      }
+
+      var remaining = wait - (now - previous);
+
+      if (remaining <= 0) {
+        clearTimeout(timeout);
+        delete throttleTimeoutIds[key];
+        throttlePreviousTimestamps[key] = now;
+        callback.apply(this, arguments);
+      } else if (!timeout && options.trailing) {
+        throttleTimeoutIds[key] = setTimeout(function () {
+          throttlePreviousTimestamps[key] = options.leading === false ? 0 : Date.now();
+          delete throttleTimeoutIds[key];
+          callback.apply(_this, meta.throttleTrailingArgs);
+          // don't leak memory!
+          meta.throttleTrailingArgs = null;
+        }, remaining);
+      }
+    }
+  });
+}
+
+function throttle() {
+  internalDeprecation('@throttle is deprecated and will be removed shortly. Use @throttle from lodash-decorators.\n\n  https://www.npmjs.com/package/lodash-decorators');
+
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return decorate(throttle_handleDescriptor, args);
+}
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/decorate.js
+function decorate__toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }
+
+
+var decorate_defineProperty = Object.defineProperty;
+
+
+function decorate_handleDescriptor(target, key, descriptor, _ref) {
+  var _ref2 = _toArray(_ref),
+      decorator = _ref2[0],
+      args = _ref2.slice(1);
+
+  var configurable = descriptor.configurable,
+      enumerable = descriptor.enumerable,
+      writable = descriptor.writable;
+
+  var originalGet = descriptor.get;
+  var originalSet = descriptor.set;
+  var originalValue = descriptor.value;
+  var isGetter = !!originalGet;
+
+  return {
+    configurable: configurable,
+    enumerable: enumerable,
+    get: function get() {
+      var fn = isGetter ? originalGet.call(this) : originalValue;
+      var value = decorator.call.apply(decorator, [this, fn].concat(decorate__toConsumableArray(args)));
+
+      if (isGetter) {
+        return value;
+      } else {
+        var desc = {
+          configurable: configurable,
+          enumerable: enumerable
+        };
+
+        desc.value = value;
+        desc.writable = writable;
+
+        decorate_defineProperty(this, key, desc);
+
+        return value;
+      }
+    },
+
+    set: isGetter ? originalSet : createDefaultSetter()
+  };
+}
+
+function decorate_decorate() {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return decorate(decorate_handleDescriptor, args);
+}
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/mixin.js
+var mixin__typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+
+
+var mixin_defineProperty = Object.defineProperty,
+    mixin_getPrototypeOf = Object.getPrototypeOf;
+
+
+function buggySymbol(symbol) {
+  return Object.prototype.toString.call(symbol) === '[object Symbol]' && (typeof symbol === 'undefined' ? 'undefined' : mixin__typeof(symbol)) === 'object';
+}
+
+function hasProperty(prop, obj) {
+  // We have to traverse manually prototypes' chain for polyfilled ES6 Symbols
+  // like "in" operator does.
+  // I.e.: Babel 5 Symbol polyfill stores every created symbol in Object.prototype.
+  // That's why we cannot use construction like "prop in obj" to check, if needed
+  // prop actually exists in given object/prototypes' chain.
+  if (buggySymbol(prop)) {
+    do {
+      if (obj === Object.prototype) {
+        // Polyfill assigns undefined as value for stored symbol key.
+        // We can assume in this special case if there is nothing assigned it doesn't exist.
+        return typeof obj[prop] !== 'undefined';
+      }
+      if (obj.hasOwnProperty(prop)) {
+        return true;
+      }
+    } while (obj = mixin_getPrototypeOf(obj));
+    return false;
+  } else {
+    return prop in obj;
+  }
+}
+
+function handleClass(target, mixins) {
+  if (!mixins.length) {
+    throw new SyntaxError('@mixin() class ' + target.name + ' requires at least one mixin as an argument');
+  }
+
+  for (var i = 0, l = mixins.length; i < l; i++) {
+    var descs = getOwnPropertyDescriptors(mixins[i]);
+    var keys = getOwnKeys(descs);
+
+    for (var j = 0, k = keys.length; j < k; j++) {
+      var key = keys[j];
+
+      if (!hasProperty(key, target.prototype)) {
+        mixin_defineProperty(target.prototype, key, descs[key]);
+      }
+    }
+  }
+}
+
+function mixin() {
+  for (var _len = arguments.length, mixins = Array(_len), _key = 0; _key < _len; _key++) {
+    mixins[_key] = arguments[_key];
+  }
+
+  internalDeprecation('@mixin is deprecated and will be removed shortly. Use @mixin from lodash-decorators.\n\n  https://www.npmjs.com/package/lodash-decorators');
+
+  if (typeof mixins[0] === 'function') {
+    return handleClass(mixins[0], []);
+  } else {
+    return function (target) {
+      return handleClass(target, mixins);
+    };
+  }
+}
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/time.js
+var time__extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var time__slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+
+
+var labels = {};
+
+// Exported for mocking in tests
+var defaultConsole = {
+  time: console.time ? console.time.bind(console) : function (label) {
+    labels[label] = new Date();
+  },
+  timeEnd: console.timeEnd ? console.timeEnd.bind(console) : function (label) {
+    var timeNow = new Date();
+    var timeTaken = timeNow - labels[label];
+    delete labels[label];
+    console.log(label + ': ' + timeTaken + 'ms');
+  }
+};
+
+var count = 0;
+
+function time_handleDescriptor(target, key, descriptor, _ref) {
+  var _ref2 = time__slicedToArray(_ref, 2),
+      _ref2$ = _ref2[0],
+      prefix = _ref2$ === undefined ? null : _ref2$,
+      _ref2$2 = _ref2[1],
+      console = _ref2$2 === undefined ? defaultConsole : _ref2$2;
+
+  var fn = descriptor.value;
+
+  if (prefix === null) {
+    prefix = target.constructor.name + '.' + key;
+  }
+
+  if (typeof fn !== 'function') {
+    throw new SyntaxError('@time can only be used on functions, not: ' + fn);
+  }
+
+  return time__extends({}, descriptor, {
+    value: function value() {
+      var label = prefix + '-' + count;
+      count++;
+      console.time(label);
+
+      try {
+        return fn.apply(this, arguments);
+      } finally {
+        console.timeEnd(label);
+      }
+    }
+  });
+}
+
+function time() {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return decorate(time_handleDescriptor, args);
+}
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/extendDescriptor.js
+var extendDescriptor__extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+
+var extendDescriptor_getPrototypeOf = Object.getPrototypeOf,
+    extendDescriptor_getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+
+
+function extendDescriptor_handleDescriptor(target, key, descriptor) {
+  var superKlass = extendDescriptor_getPrototypeOf(target);
+  var superDesc = extendDescriptor_getOwnPropertyDescriptor(superKlass, key);
+
+  return extendDescriptor__extends({}, superDesc, {
+    value: descriptor.value,
+    initializer: descriptor.initializer,
+    get: descriptor.get || superDesc.get,
+    set: descriptor.set || superDesc.set
+  });
+}
+
+function extendDescriptor() {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return decorate(extendDescriptor_handleDescriptor, args);
+}
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/profile.js
+var profile__extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var profile__slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+
+
+var oc = console;
+
+// Exported for mocking in tests
+var profile_defaultConsole = {
+  profile: console.profile ? bind(console.profile, console) : function () {},
+  profileEnd: console.profileEnd ? bind(console.profileEnd, console) : function () {},
+  warn: warn
+};
+
+function profile_handleDescriptor(target, key, descriptor, _ref) {
+  var _ref2 = profile__slicedToArray(_ref, 3),
+      _ref2$ = _ref2[0],
+      prefix = _ref2$ === undefined ? null : _ref2$,
+      _ref2$2 = _ref2[1],
+      onceThrottleOrFunction = _ref2$2 === undefined ? false : _ref2$2,
+      _ref2$3 = _ref2[2],
+      console = _ref2$3 === undefined ? profile_defaultConsole : _ref2$3;
+
+  if (!profile.__enabled) {
+    if (!profile.__warned) {
+      console.warn('console.profile is not supported. All @profile decorators are disabled.');
+      profile.__warned = true;
+    }
+    return descriptor;
+  }
+
+  var fn = descriptor.value;
+
+  if (prefix === null) {
+    prefix = target.constructor.name + '.' + key;
+  }
+
+  if (typeof fn !== 'function') {
+    throw new SyntaxError('@profile can only be used on functions, not: ' + fn);
+  }
+
+  return profile__extends({}, descriptor, {
+    value: function value() {
+      var now = Date.now();
+      var meta = metaFor(this);
+      if (onceThrottleOrFunction === true && !meta.profileLastRan || onceThrottleOrFunction === false || typeof onceThrottleOrFunction === 'number' && now - meta.profileLastRan > onceThrottleOrFunction || typeof onceThrottleOrFunction === 'function' && onceThrottleOrFunction.apply(this, arguments)) {
+        console.profile(prefix);
+        meta.profileLastRan = now;
+      }
+
+      try {
+        return fn.apply(this, arguments);
+      } finally {
+        console.profileEnd(prefix);
+      }
+    }
+  });
+}
+
+function profile() {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return decorate(profile_handleDescriptor, args);
+}
+
+// Only Chrome, Firefox, and Edge support profile.
+// Exposing properties for testing.
+profile.__enabled = !!console.profile;
+profile.__warned = false;
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/applyDecorators.js
+var applyDecorators_defineProperty = Object.defineProperty,
+    applyDecorators_getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+
+
+function applyDecorators(Class, props) {
+  var prototype = Class.prototype;
+
+
+  for (var key in props) {
+    var decorators = props[key];
+
+    for (var i = 0, l = decorators.length; i < l; i++) {
+      var decorator = decorators[i];
+
+      applyDecorators_defineProperty(prototype, key, decorator(prototype, key, applyDecorators_getOwnPropertyDescriptor(prototype, key)));
+    }
+  }
+
+  return Class;
+}
+// CONCATENATED MODULE: ./node_modules/core-decorators/es/core-decorators.js
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "override", function() { return override; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "deprecate", function() { return deprecate; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "deprecated", function() { return deprecate; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "suppressWarnings", function() { return suppressWarnings; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "memoize", function() { return memoize; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "autobind", function() { return autobind; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "readonly", function() { return readonly; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "enumerable", function() { return enumerable_enumerable; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "nonenumerable", function() { return nonenumerable; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "nonconfigurable", function() { return nonconfigurable; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "debounce", function() { return debounce; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "throttle", function() { return throttle; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "decorate", function() { return decorate_decorate; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "mixin", function() { return mixin; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "mixins", function() { return mixin; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "lazyInitialize", function() { return lazyInitialize; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "time", function() { return time; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "extendDescriptor", function() { return extendDescriptor; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "profile", function() { return profile; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "applyDecorators", function() { return applyDecorators; });
+/**
+ * core-decorators.js
+ * (c) 2017 Jay Phelps and contributors
+ * MIT Licensed
+ * https://github.com/jayphelps/core-decorators.js
+ * @license
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Helper to apply decorators to a class without transpiler support
+
 
 /***/ })
 /******/ ]);

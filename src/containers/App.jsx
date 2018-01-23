@@ -1,4 +1,4 @@
-import {Block} from '../components/Block';
+import Block from '../components/Block';
 
 const allData = {
    age: 28,
@@ -10,20 +10,23 @@ export default class App extends React.Component {
       super(props);
 
       this.name = "Alex";
+      this.surname ="Kotlov";
    }
 
    render() {
       return (
           <div className="container">
-             <Block name={this.name} data={allData} />
+             <Block name={this.name} surname={this.surname} data={allData} />
           </div>
       )
    }
 }
 
+/*
 Block.propTypes = {
    data: PropTypes.object.isRequired,
    name: PropTypes.string.isRequired
 };
+*/
 
 
