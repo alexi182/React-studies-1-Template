@@ -55,7 +55,7 @@ module.exports = {
    plugins: [
       new HtmlWebpackPlugin({
          template: path.join(__dirname, 'src', 'index.html'),
-         filename: path.join(__dirname, 'public', 'index.html')
+         filename: path.join(__dirname, 'index.html')
       }),
       new ExtractTextPlugin('css/main.css'),
       new CleanWebpackPlugin(['public']),
