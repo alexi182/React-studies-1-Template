@@ -45,11 +45,21 @@ module.exports = {
                fallback: 'style-loader',
                use: ['css-loader', 'sass-loader']
             })
+         },
+         {
+            test: /\.(png|jpg|jpeg)$/,
+            use: [{
+               'loader': 'file-loader',
+               'options': {
+                  name: './img/[name].[ext]'
+               }
+            }]
          }
       ]
    },
    resolve: {
       extensions: ['.js', '.jsx', '.css']
+      // modules: [path.resolve(__dirname, ""), "node_modules"]
    },
    devtool: 'source-map',
    plugins: [

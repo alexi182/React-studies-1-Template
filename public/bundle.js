@@ -19074,7 +19074,6 @@ var Block = (_dec = (0, _coreDecorators.autobind)(), _dec(_class = function (_Re
    function Block(props) {
       _classCallCheck(this, Block);
 
-      /* this.nick = "Sasha";*/
       var _this = _possibleConstructorReturn(this, (Block.__proto__ || Object.getPrototypeOf(Block)).call(this, props));
 
       _this.state = {
@@ -19091,10 +19090,6 @@ var Block = (_dec = (0, _coreDecorators.autobind)(), _dec(_class = function (_Re
    }, {
       key: 'render',
       value: function render() {
-         var name = this.props.name;
-         var _props$data = this.props.data,
-             age = _props$data.age,
-             sex = _props$data.sex;
          var buyItems = this.state.buyItems;
 
 
@@ -19103,27 +19098,13 @@ var Block = (_dec = (0, _coreDecorators.autobind)(), _dec(_class = function (_Re
             null,
             React.createElement(
                'p',
-               null,
-               name
-            ),
-            React.createElement(
-               'p',
-               null,
-               age
-            ),
-            React.createElement(
-               'p',
-               null,
-               sex
-            ),
-            React.createElement(
-               'p',
                { onClick: this.say },
                '\u041A\u043B\u0438\u043A'
             ),
+            React.createElement('img', { className: 'img-style', src: __webpack_require__(44) }),
             buyItems.map(function (item, i) {
                return React.createElement(
-                  'span',
+                  'p',
                   { key: i },
                   item
                );
@@ -20519,6 +20500,12 @@ function applyDecorators(Class, props) {
 
 // Helper to apply decorators to a class without transpiler support
 
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./img/2.jpg";
 
 /***/ })
 /******/ ]);

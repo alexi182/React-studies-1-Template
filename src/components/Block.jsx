@@ -5,7 +5,6 @@ export default class Block extends React.Component{
 
    constructor(props) {
       super(props);
-      /* this.nick = "Sasha";*/
       this.state = {
          buyItems: ['metal', 'rock', 'core']
       }
@@ -17,21 +16,18 @@ export default class Block extends React.Component{
 
    render() {
 
-      const {name} = this.props;
-      const {age, sex} = this.props.data;
       const { buyItems } = this.state;
 
       return (
           <div>
-             <p>{name}</p>
-             <p>{age}</p>
-             <p>{sex}</p>
 
              <p onClick={this.say}>Клик</p>
 
+             <img className="img-style" src={require("../img/2.jpg")} />
+
              {buyItems.map((item,i) => {
                 return (
-                    <span key={i}>{item}</span>
+                    <p key={i}>{item}</p>
                 )
              })
              }

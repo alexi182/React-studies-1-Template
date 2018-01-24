@@ -3,5 +3,8 @@ body {
 
 .title {
   font-size: 15px; }
+.img-style {
+  width: 500px;
+  height: auto; }
 
 /*# sourceMappingURL=main.css.map*/
