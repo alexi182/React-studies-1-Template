@@ -1,12 +1,38 @@
 import {autobind} from 'core-decorators';
 
 @autobind()
-export default class Block extends React.Component{
+export default class Block extends React.Component {
 
    constructor(props) {
       super(props);
       this.state = {
-         buyItems: ['metal', 'rock', 'core']
+         users: [
+            {
+               "Name":"Москва",
+               "Surname":"Попов",
+               "Username": "alex"
+            },
+            {
+               "Name":"Москва",
+               "Surname":"Попов",
+               "Username": "alex"
+            },
+            {
+               "Name":"Москва",
+               "Surname":"Попов",
+               "Username": "alex"
+            },
+            {
+               "Name":"Москва",
+               "Surname":"Попов",
+               "Username": "alex"
+            },
+            {
+               "Name":"Москва",
+               "Surname":"Попов",
+               "Username": "alex"
+            }
+         ]
       }
    }
 
@@ -16,7 +42,7 @@ export default class Block extends React.Component{
 
    render() {
 
-      const { buyItems } = this.state;
+      const { users } = this.state;
 
       return (
           <div>
@@ -25,12 +51,27 @@ export default class Block extends React.Component{
 
              <img className="img-style" src={require("../img/2.jpg")} />
 
-             {buyItems.map((item,i) => {
-                return (
-                    <p key={i}>{item}</p>
-                )
-             })
-             }
+             <p>{this.props.name}</p>
+
+             <table className="table">
+                <thead>
+                <tr>
+                   <th scope="col">Имя</th>
+                   <th scope="col">Фамилия</th>
+                   <th scope="col">Username</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                   {users.map((item,i) => {
+                      return (
+                          <td key={i}>{item}</td>
+                      )
+                   })
+                   }
+                </tr>
+                </tbody>
+             </table>
           </div>
       )
    }

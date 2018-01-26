@@ -5,18 +5,20 @@ const allData = {
    sex: 'man'
 };
 
+const name = "Alex";
+
 export default class App extends React.Component {
    constructor(props) {
       super(props);
 
-      this.name = "Alex";
+/*      this.name = "Alex";*/
       this.surname ="Kotlov";
    }
 
    render() {
       return (
           <div className="container">
-             <Block name={this.name} surname={this.surname} data={allData} />
+             <Block name={name} surname={this.surname} data={allData} />
           </div>
       )
    }
