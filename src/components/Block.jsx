@@ -1,38 +1,30 @@
 import {autobind} from 'core-decorators';
 
+const users = [
+   {
+      name: 'Саша',
+      surname :'Попов',
+      username: 'alex182'
+   },
+   {
+      name: 'Андрей',
+      surname :'Котлов',
+      username: 'shogun'
+   },
+   {
+      name: 'Сергей',
+      surname :'Сидоров',
+      username: 'uran'
+   }
+];
+
 @autobind()
 export default class Block extends React.Component {
 
    constructor(props) {
       super(props);
       this.state = {
-         users: [
-            {
-               "Name":"Москва",
-               "Surname":"Попов",
-               "Username": "alex"
-            },
-            {
-               "Name":"Москва",
-               "Surname":"Попов",
-               "Username": "alex"
-            },
-            {
-               "Name":"Москва",
-               "Surname":"Попов",
-               "Username": "alex"
-            },
-            {
-               "Name":"Москва",
-               "Surname":"Попов",
-               "Username": "alex"
-            },
-            {
-               "Name":"Москва",
-               "Surname":"Попов",
-               "Username": "alex"
-            }
-         ]
+
       }
    }
 
@@ -42,7 +34,7 @@ export default class Block extends React.Component {
 
    render() {
 
-      const { users } = this.state;
+      /* const { users } = this.state;*/
 
       return (
           <div>
@@ -53,6 +45,8 @@ export default class Block extends React.Component {
 
              <p>{this.props.name}</p>
 
+             <input type="text" className="form-control" onClick={} />
+
              <table className="table">
                 <thead>
                 <tr>
@@ -61,15 +55,18 @@ export default class Block extends React.Component {
                    <th scope="col">Username</th>
                 </tr>
                 </thead>
+
                 <tbody>
-                <tr>
-                   {users.map((item,i) => {
-                      return (
-                          <td key={i}>{item}</td>
-                      )
-                   })
-                   }
-                </tr>
+                {users.map((item,i) => {
+                   return (
+                       <tr>
+                          <td key={i}>{item.name}</td>e
+                          <td key={i}>{item.surname}</td>
+                          <td key={i}>{item.username}</td>
+                       </tr>
+                   )
+                })
+                }
                 </tbody>
              </table>
           </div>
