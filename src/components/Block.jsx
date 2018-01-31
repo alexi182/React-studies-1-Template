@@ -23,29 +23,61 @@ export default class Block extends React.Component {
 
    constructor(props) {
       super(props);
-      this.state = {
 
+      this.state = {
+         search: '',
+         table: users
       }
    }
 
-   say() {
+  /* say() {
       console.log(`${this.props.surname} is mine`);
+   }*/
+
+   search(e) {
+
+      /*let result = users.forEach((item) => {
+         return (
+             item.name
+         )
+      });debugger;*/
+
+      let result = users;
+
+      let nameResult = result.forEach(function(item) {
+         return (
+             item.name
+         )
+      });
+
+      console.log(nameResult);
+
+      let val = e.target.value;
+
+      this.setState({
+         search: val
+     /*    table: result*/
+      });
+
+
    }
 
    render() {
 
-      /* const { users } = this.state;*/
+      const {search, table} = this.state;
 
       return (
           <div>
 
-             <p onClick={this.say}>Клик</p>
+             {/*<p onClick={this.say}>Клик</p>*/}
 
              <img className="img-style" src={require("../img/2.jpg")} />
 
+             <p>{search}</p>
+
              <p>{this.props.name}</p>
 
-             <input type="text" className="form-control" onClick={} />
+             <input type="text" className="form-control" onChange={this.search} />
 
              <table className="table">
                 <thead>
@@ -59,10 +91,10 @@ export default class Block extends React.Component {
                 <tbody>
                 {users.map((item,i) => {
                    return (
-                       <tr>
-                          <td key={i}>{item.name}</td>e
-                          <td key={i}>{item.surname}</td>
-                          <td key={i}>{item.username}</td>
+                       <tr key={i}>
+                          <td>{item.name}</td>
+                          <td>{item.surname}</td>
+                          <td>{item.username}</td>
                        </tr>
                    )
                 })
