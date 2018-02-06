@@ -1,109 +1,110 @@
 import {autobind} from 'core-decorators';
 
 const users = [
-   {
-      name: 'Саша',
-      surname :'Попов',
-      username: 'alex182'
-   },
-   {
-      name: 'Андрей',
-      surname :'Котлов',
-      username: 'shogun'
-   },
-   {
-      name: 'Сергей',
-      surname :'Сидоров',
-      username: 'uran'
-   }
+    {
+        name: 'Саша',
+        surname :'Попов',
+        username: 'alex182'
+    },
+    {
+        name: 'Андрей',
+        surname :'Котлов',
+        username: 'shogun'
+    },
+    {
+        name: 'Сергей',
+        surname :'Сидоров',
+        username: 'uran'
+    }
 ];
 
 @autobind()
 export default class Block extends React.Component {
 
-   constructor(props) {
-      super(props);
+    constructor(props) {
+        super(props);
 
-      this.state = {
-         search: '',
-         table: users
-      }
-   }
+        this.state = {
+            search: '',
+            table: users
+        }
+    }
 
-  /* say() {
-      console.log(`${this.props.surname} is mine`);
-   }*/
+    /* say() {
+        console.log(`${this.props.surname} is mine`);
+     }*/
 
-   search(e) {
+    search(e) {
 
-      /*let result = users.forEach((item) => {
-         return (
-             item.name
-         )
-      });debugger;*/
+        /*let result = users.forEach((item) => {
+           return (
+               item.name
+           )
+        });debugger;*/
 
-      let result = users;
+        let result = users;
 
-      let nameResult = result.forEach(function(item) {
-         return (
-             item.name
-         )
-      });
+        let nameResult = result.forEach(function(item) {
+            return (
+                item.name
+            )
+        });
 
-      console.log(nameResult);
+        console.log(nameResult);
 
-      let val = e.target.value;
+        let val = e.target.value;
 
-      this.setState({
-         search: val
-     /*    table: result*/
-      });
+        this.setState({
+            search: val
+            /*    table: result*/
+        });
 
+    }
 
-   }
+    render() {
 
-   render() {
+        const {search, table} = this.state;
 
-      const {search, table} = this.state;
+        return (
+            <div>
 
-      return (
-          <div>
+                {/*<p onClick={this.say}>Клик</p>*/}
 
-             {/*<p onClick={this.say}>Клик</p>*/}
+                <img className="img-style" src={require("../img/2.jpg")} />
 
-             <img className="img-style" src={require("../img/2.jpg")} />
+                <img className="img-style" src={require("../img/3.jpg")} />
 
-             <p>{search}</p>
+                <p>{search}</p>
 
-             <p>{this.props.name}</p>
+                <p>{this.props.name}</p>
 
-             <input type="text" className="form-control" onChange={this.search} />
+                <input type="text" className="form-control" onChange={this.search} />
 
-             <table className="table">
-                <thead>
-                <tr>
-                   <th scope="col">Имя</th>
-                   <th scope="col">Фамилия</th>
-                   <th scope="col">Username</th>
-                </tr>
-                </thead>
+                <table className="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Имя</th>
+                        <th scope="col">Фамилия</th>
+                        <th scope="col">Username</th>
+                    </tr>
+                    </thead>
 
-                <tbody>
-                {users.map((item,i) => {
-                   return (
-                       <tr key={i}>
-                          <td>{item.name}</td>
-                          <td>{item.surname}</td>
-                          <td>{item.username}</td>
-                       </tr>
-                   )
-                })
-                }
-                </tbody>
-             </table>
-          </div>
-      )
-   }
+                    <tbody>
+                    {users.map((item,i) => {
+                        return (
+                            <tr key={i}>
+                                <td>{item.name}</td>
+                                <td>{item.surname}</td>
+                                <td>{item.username}</td>
+                            </tr>
+                        )
+                    })
+                    }
+                    </tbody>
+                </table>
+            </div>
+        )
+    }
 }
 
 /*

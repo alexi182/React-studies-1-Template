@@ -19052,7 +19052,7 @@ exports.default = App;
 /* WEBPACK VAR INJECTION */(function(React) {
 
 Object.defineProperty(exports, "__esModule", {
-   value: true
+    value: true
 });
 exports.default = undefined;
 
@@ -19069,143 +19069,144 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var users = [{
-   name: 'Саша',
-   surname: 'Попов',
-   username: 'alex182'
+    name: 'Саша',
+    surname: 'Попов',
+    username: 'alex182'
 }, {
-   name: 'Андрей',
-   surname: 'Котлов',
-   username: 'shogun'
+    name: 'Андрей',
+    surname: 'Котлов',
+    username: 'shogun'
 }, {
-   name: 'Сергей',
-   surname: 'Сидоров',
-   username: 'uran'
+    name: 'Сергей',
+    surname: 'Сидоров',
+    username: 'uran'
 }];
 
 var Block = (_dec = (0, _coreDecorators.autobind)(), _dec(_class = function (_React$Component) {
-   _inherits(Block, _React$Component);
+    _inherits(Block, _React$Component);
 
-   function Block(props) {
-      _classCallCheck(this, Block);
+    function Block(props) {
+        _classCallCheck(this, Block);
 
-      var _this = _possibleConstructorReturn(this, (Block.__proto__ || Object.getPrototypeOf(Block)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Block.__proto__ || Object.getPrototypeOf(Block)).call(this, props));
 
-      _this.state = {
-         search: '',
-         table: users
-      };
-      return _this;
-   }
+        _this.state = {
+            search: '',
+            table: users
+        };
+        return _this;
+    }
 
-   /* say() {
-       console.log(`${this.props.surname} is mine`);
-    }*/
+    /* say() {
+        console.log(`${this.props.surname} is mine`);
+     }*/
 
-   _createClass(Block, [{
-      key: 'search',
-      value: function search(e) {
+    _createClass(Block, [{
+        key: 'search',
+        value: function search(e) {
 
-         /*let result = users.forEach((item) => {
-            return (
-                item.name
-            )
-         });debugger;*/
-
-         var result = users;
-
-         var nameResult = result.forEach(function (item) {
-            return item.name;
-         });
-
-         console.log(nameResult);
-
-         var val = e.target.value;
-
-         this.setState({
-            search: val
-            /*    table: result*/
-         });
-      }
-   }, {
-      key: 'render',
-      value: function render() {
-         var _state = this.state,
-             search = _state.search,
-             table = _state.table;
-
-
-         return React.createElement(
-            'div',
-            null,
-            React.createElement('img', { className: 'img-style', src: __webpack_require__(44) }),
-            React.createElement(
-               'p',
-               null,
-               search
-            ),
-            React.createElement(
-               'p',
-               null,
-               this.props.name
-            ),
-            React.createElement('input', { type: 'text', className: 'form-control', onChange: this.search }),
-            React.createElement(
-               'table',
-               { className: 'table' },
-               React.createElement(
-                  'thead',
-                  null,
-                  React.createElement(
-                     'tr',
-                     null,
-                     React.createElement(
-                        'th',
-                        { scope: 'col' },
-                        '\u0418\u043C\u044F'
-                     ),
-                     React.createElement(
-                        'th',
-                        { scope: 'col' },
-                        '\u0424\u0430\u043C\u0438\u043B\u0438\u044F'
-                     ),
-                     React.createElement(
-                        'th',
-                        { scope: 'col' },
-                        'Username'
-                     )
-                  )
-               ),
-               React.createElement(
-                  'tbody',
-                  null,
-                  users.map(function (item, i) {
-                     return React.createElement(
-                        'tr',
-                        { key: i },
-                        React.createElement(
-                           'td',
-                           null,
-                           item.name
-                        ),
-                        React.createElement(
-                           'td',
-                           null,
-                           item.surname
-                        ),
-                        React.createElement(
-                           'td',
-                           null,
-                           item.username
-                        )
-                     );
-                  })
+            /*let result = users.forEach((item) => {
+               return (
+                   item.name
                )
-            )
-         );
-      }
-   }]);
+            });debugger;*/
 
-   return Block;
+            var result = users;
+
+            var nameResult = result.forEach(function (item) {
+                return item.name;
+            });
+
+            console.log(nameResult);
+
+            var val = e.target.value;
+
+            this.setState({
+                search: val
+                /*    table: result*/
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _state = this.state,
+                search = _state.search,
+                table = _state.table;
+
+
+            return React.createElement(
+                'div',
+                null,
+                React.createElement('img', { className: 'img-style', src: __webpack_require__(44) }),
+                React.createElement('img', { className: 'img-style', src: __webpack_require__(47) }),
+                React.createElement(
+                    'p',
+                    null,
+                    search
+                ),
+                React.createElement(
+                    'p',
+                    null,
+                    this.props.name
+                ),
+                React.createElement('input', { type: 'text', className: 'form-control', onChange: this.search }),
+                React.createElement(
+                    'table',
+                    { className: 'table' },
+                    React.createElement(
+                        'thead',
+                        null,
+                        React.createElement(
+                            'tr',
+                            null,
+                            React.createElement(
+                                'th',
+                                { scope: 'col' },
+                                '\u0418\u043C\u044F'
+                            ),
+                            React.createElement(
+                                'th',
+                                { scope: 'col' },
+                                '\u0424\u0430\u043C\u0438\u043B\u0438\u044F'
+                            ),
+                            React.createElement(
+                                'th',
+                                { scope: 'col' },
+                                'Username'
+                            )
+                        )
+                    ),
+                    React.createElement(
+                        'tbody',
+                        null,
+                        users.map(function (item, i) {
+                            return React.createElement(
+                                'tr',
+                                { key: i },
+                                React.createElement(
+                                    'td',
+                                    null,
+                                    item.name
+                                ),
+                                React.createElement(
+                                    'td',
+                                    null,
+                                    item.surname
+                                ),
+                                React.createElement(
+                                    'td',
+                                    null,
+                                    item.username
+                                )
+                            );
+                        })
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Block;
 }(React.Component)) || _class);
 
 /*
@@ -20597,7 +20598,15 @@ function applyDecorators(Class, props) {
 /* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "./img/2.jpg";
+module.exports = __webpack_require__.p + "./img/public/2.jpg";
+
+/***/ }),
+/* 45 */,
+/* 46 */,
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./img/public/3.jpg";
 
 /***/ })
 /******/ ]);
