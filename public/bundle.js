@@ -19138,7 +19138,7 @@ var Block = (_dec = (0, _coreDecorators.autobind)(), _dec(_class = function (_Re
                 'div',
                 null,
                 React.createElement('img', { className: 'img-style', src: __webpack_require__(44) }),
-                React.createElement('img', { className: 'img-style', src: __webpack_require__(47) }),
+                React.createElement('img', { className: 'img-style', src: __webpack_require__(45) }),
                 React.createElement(
                     'p',
                     null,
@@ -20596,17 +20596,15 @@ function applyDecorators(Class, props) {
 
 /***/ }),
 /* 44 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__.p + "./img/public/2.jpg";
+module.exports = "public/img/2.jpg";
 
 /***/ }),
-/* 45 */,
-/* 46 */,
-/* 47 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 45 */
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__.p + "./img/public/3.jpg";
+module.exports = "public/img/3.jpg";
 
 /***/ })
 /******/ ]);
