@@ -70,9 +70,9 @@ export default class Block extends React.Component {
 
                 {/*<p onClick={this.say}>Клик</p>*/}
 
-                <img className="img-style" src={require("../img/2.jpg")} />
+                <img className="img-style" src={require("../img/1.jpg")} />
 
-                <img className="img-style" src={require("../img/3.jpg")} />
+                <img className="img-style" src={require("../img/5.jpg")} />
 
                 <p>{search}</p>
 
