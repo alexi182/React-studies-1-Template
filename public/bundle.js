@@ -18983,7 +18983,7 @@ module.exports = "/*!\n  * Bootstrap v4.0.0 (https://getbootstrap.com)\n  * Copy
 /* WEBPACK VAR INJECTION */(function(React) {
 
 Object.defineProperty(exports, "__esModule", {
-   value: true
+    value: true
 });
 exports.default = undefined;
 
@@ -19002,35 +19002,35 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var allData = {
-   age: 28,
-   sex: 'man'
+    age: 28,
+    sex: 'man'
 };
 
 var App = function (_React$Component) {
-   _inherits(App, _React$Component);
+    _inherits(App, _React$Component);
 
-   function App(props) {
-      _classCallCheck(this, App);
+    function App(props) {
+        _classCallCheck(this, App);
 
-      /*      this.name = "Alex";*/
-      var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+        /* this.name = "Alex";*/
+        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
-      _this.surname = "Kotlov";
-      return _this;
-   }
+        _this.surname = "Kotlov";
+        return _this;
+    }
 
-   _createClass(App, [{
-      key: 'render',
-      value: function render() {
-         return React.createElement(
-            'div',
-            { className: 'container' },
-            React.createElement(_Block2.default, { surname: this.surname, data: allData })
-         );
-      }
-   }]);
+    _createClass(App, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'div',
+                { className: 'container' },
+                React.createElement(_Block2.default, { surname: this.surname, data: allData })
+            );
+        }
+    }]);
 
-   return App;
+    return App;
 }(React.Component);
 
 /*
@@ -19151,6 +19151,35 @@ var Block = (_dec = (0, _coreDecorators.autobind)(), _dec(_class = function (_Re
                 ),
                 React.createElement('input', { type: 'text', className: 'form-control', onChange: this.search }),
                 React.createElement(
+                    'form',
+                    null,
+                    React.createElement(
+                        'div',
+                        { className: 'form-group' },
+                        React.createElement(
+                            'label',
+                            { htmlFor: 'exampleInputEmail1' },
+                            '\u0412\u0432\u043E\u0434'
+                        ),
+                        React.createElement('input', { type: 'email', className: 'form-control', id: 'exampleInputEmail1', 'aria-describedby': 'emailHelp', placeholder: '\u0412\u0432\u0435\u0441\u0442\u0438 \u0442\u0435\u043A\u0441\u0442' })
+                    ),
+                    React.createElement(
+                        'div',
+                        { className: 'form-check' },
+                        React.createElement('input', { type: 'checkbox', className: 'form-check-input', id: 'exampleCheck1' }),
+                        React.createElement(
+                            'label',
+                            { className: 'form-check-label', htmlFor: 'exampleCheck1' },
+                            'Check me out'
+                        )
+                    ),
+                    React.createElement(
+                        'button',
+                        { type: 'submit', className: 'btn btn-primary' },
+                        'Submit'
+                    )
+                ),
+                React.createElement(
                     'table',
                     { className: 'table' },
                     React.createElement(
@@ -19161,18 +19190,23 @@ var Block = (_dec = (0, _coreDecorators.autobind)(), _dec(_class = function (_Re
                             null,
                             React.createElement(
                                 'th',
-                                { scope: 'col' },
+                                null,
                                 '\u0418\u043C\u044F'
                             ),
                             React.createElement(
                                 'th',
-                                { scope: 'col' },
+                                null,
                                 '\u0424\u0430\u043C\u0438\u043B\u0438\u044F'
                             ),
                             React.createElement(
                                 'th',
-                                { scope: 'col' },
+                                null,
                                 'Username'
+                            ),
+                            React.createElement(
+                                'th',
+                                { className: 'text-center' },
+                                'Action'
                             )
                         )
                     ),
@@ -19197,9 +19231,27 @@ var Block = (_dec = (0, _coreDecorators.autobind)(), _dec(_class = function (_Re
                                     'td',
                                     null,
                                     item.username
+                                ),
+                                React.createElement(
+                                    'td',
+                                    { className: 'text-center' },
+                                    React.createElement(
+                                        'button',
+                                        { type: 'button', className: 'btn btn-outline-secondary' },
+                                        'Remove'
+                                    )
                                 )
                             );
                         })
+                    )
+                ),
+                React.createElement(
+                    'div',
+                    { className: 'd-flex justify-content-end' },
+                    React.createElement(
+                        'button',
+                        { type: 'button', className: ' btn btn-outline-secondary' },
+                        'Remove All'
                     )
                 )
             );
