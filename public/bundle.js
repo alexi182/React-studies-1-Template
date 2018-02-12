@@ -19034,7 +19034,7 @@ var App = function (_React$Component) {
 }(React.Component);
 
 /*
-Block.propTypes = {
+Block.propTypes = { 
    data: PropTypes.object.isRequired,
    name: PropTypes.string.isRequired
 };
@@ -19082,6 +19082,12 @@ var users = [{
     username: 'uran'
 }];
 
+var users2 = [{
+    name: 'Саша2',
+    surname: 'Попов2',
+    username: 'alex1822'
+}];
+
 var Block = (_dec = (0, _coreDecorators.autobind)(), _dec(_class = function (_React$Component) {
     _inherits(Block, _React$Component);
 
@@ -19092,7 +19098,8 @@ var Block = (_dec = (0, _coreDecorators.autobind)(), _dec(_class = function (_Re
 
         _this.state = {
             search: '',
-            table: users
+            table: users,
+            table2: users
         };
         return _this;
     }
@@ -19102,6 +19109,16 @@ var Block = (_dec = (0, _coreDecorators.autobind)(), _dec(_class = function (_Re
      }*/
 
     _createClass(Block, [{
+        key: 'addItem',
+        value: function addItem(e) {
+            e.preventDefault();
+            var newItem = 'test';
+
+            this.setState({
+                table: [users2]
+            });
+        }
+    }, {
         key: 'search',
         value: function search(e) {
 
@@ -19123,12 +19140,14 @@ var Block = (_dec = (0, _coreDecorators.autobind)(), _dec(_class = function (_Re
 
             this.setState({
                 search: val
-                /*    table: result*/
+                /* table: result*/
             });
         }
     }, {
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
             var _state = this.state,
                 search = _state.search,
                 table = _state.table;
@@ -19152,31 +19171,18 @@ var Block = (_dec = (0, _coreDecorators.autobind)(), _dec(_class = function (_Re
                 React.createElement('input', { type: 'text', className: 'form-control', onChange: this.search }),
                 React.createElement(
                     'form',
-                    null,
+                    { className: 'form-inline', onSubmit: function onSubmit(e) {
+                            return _this2.addItem(e);
+                        } },
                     React.createElement(
                         'div',
                         { className: 'form-group' },
-                        React.createElement(
-                            'label',
-                            { htmlFor: 'exampleInputEmail1' },
-                            '\u0412\u0432\u043E\u0434'
-                        ),
-                        React.createElement('input', { type: 'email', className: 'form-control', id: 'exampleInputEmail1', 'aria-describedby': 'emailHelp', placeholder: '\u0412\u0432\u0435\u0441\u0442\u0438 \u0442\u0435\u043A\u0441\u0442' })
-                    ),
-                    React.createElement(
-                        'div',
-                        { className: 'form-check' },
-                        React.createElement('input', { type: 'checkbox', className: 'form-check-input', id: 'exampleCheck1' }),
-                        React.createElement(
-                            'label',
-                            { className: 'form-check-label', htmlFor: 'exampleCheck1' },
-                            'Check me out'
-                        )
+                        React.createElement('input', { type: 'text', className: 'form-control', id: 'exampleInputEmail1', 'aria-describedby': 'emailHelp', placeholder: '\u0412\u0432\u0435\u0441\u0442\u0438 \u0442\u0435\u043A\u0441\u0442' })
                     ),
                     React.createElement(
                         'button',
                         { type: 'submit', className: 'btn btn-primary' },
-                        'Submit'
+                        'Add'
                     )
                 ),
                 React.createElement(
@@ -19213,7 +19219,7 @@ var Block = (_dec = (0, _coreDecorators.autobind)(), _dec(_class = function (_Re
                     React.createElement(
                         'tbody',
                         null,
-                        users.map(function (item, i) {
+                        table.map(function (item, i) {
                             return React.createElement(
                                 'tr',
                                 { key: i },

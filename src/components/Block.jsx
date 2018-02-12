@@ -18,6 +18,14 @@ const users = [
     }
 ];
 
+const users2 = [
+    {
+        name: 'Саша2',
+        surname :'Попов2',
+        username: 'alex1822'
+    }
+];
+
 @autobind()
 export default class Block extends React.Component {
 
@@ -26,13 +34,23 @@ export default class Block extends React.Component {
 
         this.state = {
             search: '',
-            table: users
+            table: users,
+            table2: users
         }
     }
 
     /* say() {
         console.log(`${this.props.surname} is mine`);
      }*/
+
+    addItem(e) {
+        e.preventDefault();
+        const newItem = 'test';
+
+        this.setState({
+            table: [users2]
+        })
+    }
 
     search(e) {
 
@@ -56,9 +74,8 @@ export default class Block extends React.Component {
 
         this.setState({
             search: val
-            /*    table: result*/
+            /* table: result*/
         });
-
     }
 
     render() {
@@ -77,17 +94,17 @@ export default class Block extends React.Component {
 
                 <input type="text" className="form-control" onChange={this.search} />
 
-                <form>
+                <form className="form-inline" onSubmit={(e) => this.addItem(e)}>
                     <div className="form-group">
-                        <label htmlFor="exampleInputEmail1">Ввод</label>
-                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ввести текст" />
+                        <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ввести текст" />
+                    </div>
 
-                    </div>
-                    <div className="form-check">
+                   {/* <div className="form-check">
                         <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                            <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                        <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
+                    </div>*/}
+
+                    <button type="submit" className="btn btn-primary">Add</button>
                 </form>
 
                 <table className="table">
@@ -101,7 +118,7 @@ export default class Block extends React.Component {
                     </thead>
 
                     <tbody>
-                    {users.map((item,i) => {
+                    {table.map((item,i) => {
                         return (
                             <tr key={i}>
                                 <td>{item.name}</td>
@@ -114,13 +131,14 @@ export default class Block extends React.Component {
                     }
                     </tbody>
                 </table>
+
                 <div className="d-flex justify-content-end">
                     <button type="button" className=" btn btn-outline-secondary">Remove All</button>
                 </div>
             </div>
-    )
+        )
     }
-    }
+}
 
 /*
 class BlockItem extends Block {

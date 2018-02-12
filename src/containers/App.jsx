@@ -23,7 +23,7 @@ export default class App extends React.Component {
 }
 
 /*
-Block.propTypes = {
+Block.propTypes = { 
    data: PropTypes.object.isRequired,
    name: PropTypes.string.isRequired
 };
