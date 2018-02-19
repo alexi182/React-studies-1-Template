@@ -90,6 +90,7 @@ export default class Block extends React.Component {
                 <img className="img-style" src={require("../img/5.jpg")} />
 
                 <p>{search}</p>
+
                 <p>{this.props.name}</p>
 
                 <input type="text" className="form-control" onChange={this.search} />
